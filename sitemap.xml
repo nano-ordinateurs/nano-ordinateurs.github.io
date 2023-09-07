@@ -2,222 +2,227 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://nano-ordinateur.github.io/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex01_enonce/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex02_enonce/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex03_enonce/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://nano-ordinateur.github.io/exercices/formatif_formel/</loc>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/_todo/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_animation/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_basics/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_bootstrap/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_boxmodel/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_flexbox/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_font/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_grid/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_mediaquery/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/css_variable/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/env_ide/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/env_structure/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/form_css/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/form_element/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/form_structure/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/form_validation_html/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/form_validation_js/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/git_basics/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/git_githubpages/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/how_parralax/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/how_password_reveal/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/html_basics/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/html_site/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/html_structure/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/html_tag/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_attribute/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_basics/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_create_element/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_debug/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_element_text/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_function/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_getelement/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_local_storage/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/js_string/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/ressources/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/web_dns/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/web_hebergement/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/web_publish/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/web_referencement/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/web_ssl/</loc>
-         <lastmod>2023-08-31</lastmod>
+         <lastmod>2023-09-07</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
