@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/sense_hat/sense_hat/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/esp32/setup/">
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../../sense_hat/capteur/">
       
       
-        <link rel="next" href="../sense_emu/">
+        <link rel="next" href="../premier_sketch/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Définitions - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Configuration - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sense-hat" class="md-skip">
+        <a href="#configuration" class="md-skip">
           Aller au contenu
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Définitions
+              Configuration
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../sense_hat/sense_hat/" class="md-tabs__link md-tabs__link--active">
         Notes de cours
       </a>
     </li>
@@ -358,16 +358,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
       
       
       
@@ -376,7 +374,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           Sense Hat
@@ -387,21 +385,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../sense_hat/sense_hat/" class="md-nav__link">
         Définitions
       </a>
-      
     </li>
   
 
@@ -413,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sense_emu/" class="md-nav__link">
+      <a href="../../sense_hat/sense_emu/" class="md-nav__link">
         Émulateur
       </a>
     </li>
@@ -427,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lancer_script/" class="md-nav__link">
+      <a href="../../sense_hat/lancer_script/" class="md-nav__link">
         Interragir avec le Sense Hat
       </a>
     </li>
@@ -441,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../couleur/" class="md-nav__link">
+      <a href="../../sense_hat/couleur/" class="md-nav__link">
         Mettre un peu de couleur
       </a>
     </li>
@@ -455,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../affichage_pixel/" class="md-nav__link">
+      <a href="../../sense_hat/affichage_pixel/" class="md-nav__link">
         Afficher sur un pixel
       </a>
     </li>
@@ -469,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joystick/" class="md-nav__link">
+      <a href="../../sense_hat/joystick/" class="md-nav__link">
         Utilisation du joystick
       </a>
     </li>
@@ -483,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../capteur/" class="md-nav__link">
+      <a href="../../sense_hat/capteur/" class="md-nav__link">
         Capteurs
       </a>
     </li>
@@ -502,14 +490,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -518,7 +508,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Esp32
@@ -529,11 +519,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../esp32/setup/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Configuration
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Configuration
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-des-drivers-ch340" class="md-nav__link">
+    Installation des drivers CH340
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-arduino-ide" class="md-nav__link">
+    Installation de Arduino IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-de-lenvironnement" class="md-nav__link">
+    Configuration de l'environnement
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -545,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/premier_sketch/" class="md-nav__link">
+      <a href="../premier_sketch/" class="md-nav__link">
         Notre premier sketch
       </a>
     </li>
@@ -559,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/serial_monitor/" class="md-nav__link">
+      <a href="../serial_monitor/" class="md-nav__link">
         Le moniteur série
       </a>
     </li>
@@ -719,6 +764,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation-des-drivers-ch340" class="md-nav__link">
+    Installation des drivers CH340
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-de-arduino-ide" class="md-nav__link">
+    Installation de Arduino IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-de-lenvironnement" class="md-nav__link">
+    Configuration de l'environnement
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -735,38 +809,29 @@
   
 
 
-<h1 id="sense-hat">Sense Hat</h1>
-<p>Le Sense Hat est un carte d'extension qu'on branche sur un Raspberry Pi (Hat est une abbréviation qui signifie "Hardware Attached on Top") pour étendre ses fonctionnalitées grâce à une série de capteurs: </p>
+<h1 id="configuration">Configuration</h1>
+<p>Avant de pouvoir exécuter des scripts sur le ESP32 on doit faire quelques petites configurations. </p>
+<h2 id="installation-des-drivers-ch340">Installation des drivers CH340</h2>
+<p>Pour transérer notre code il faut installer le driver CH340 sur notre ordinateur. </p>
+<p>Commencez par connecter le ESP32 à l'ordinateur à l'aide du cable USB.</p>
+<p>Ensuite téléchargez le driver à cette adresse : <a href="https://www.wch-ic.com/search?q=CH340&amp;t=downloads" target="_blank">https://www.wch-ic.com/search?q=CH340&amp;t=downloads</a>. Le fichier à télécharger pour les portables sous Windows est <strong>CH341SER.exe</strong>. Exécutez le fichier une fois téléchargé.</p>
+<p>Pour vérifier que le driver est bien installé, ouvrez l'explorateur de fichier et cliquez avec le bouton de droit sur "Ce PC". Sélectionnez ensuite "Gérer" et dans le paneau de droite "Gestionnaire de périphériques". </p>
+<p><img alt="setup_01" class="center shadow" src="\assets\images\esp32_setup_01.png" /></p>
+<p>Dans la section "Ports (COM et LPT)" vous devriez avoir une entrée "USB-SERIAL CH340(COM4)". Le numéro du port peut changer (COM4).</p>
+<h2 id="installation-de-arduino-ide">Installation de Arduino IDE</h2>
+<p>Passons maintenant à l'installation de notre IDE, Arduino IDE. Allez à l'adresse suivante télécharger la dernière version disponible pour votre système d'exploitation : </p>
 <ul>
-<li>Accéléromètre:  pour obtenir la vitesse de déplacement du PI</li>
-<li>Gyroscope: pour capturez le mouvement de rotation du Raspberry Pi</li>
-<li>Magnétomètre: pour mesurer du champ magnétique</li>
-<li>Capteur de pression d’air</li>
-<li>Capteurs de température et d’humidité</li>
+<li><a href="https://www.arduino.cc/en/software" target="_blank">https://www.arduino.cc/en/software</a></li>
 </ul>
-<p>Pour terminer, le Sense Hat possède une matrice de LED 8x8 et un mini-joystick.</p>
-<p><img alt="Sense Hat" class="center" src="\assets\images\sense_hat_01.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Info<p>À l'origine le Sense Hat se nommait "Astro Pi" et avait été développé dans l'objectif d'envoyer des Raspberry Pi avec capteurs à bord de la Station spatiale internationale (ISS).</p>
-</p>
-</div>
-<h1 id="emulateur-de-sense-hat">Emulateur de Sense Hat</h1>
-<p>Il existe des émulateurs de Sense Hat qui nous permet de créer des scripts et d'interragir avec les capteurs sans avoir besoin de posséder la carte physiquement. </p>
-<p>Vous pouvez en trouver un en ligne à l'adresse <a href="https://trinket.io/sense-hat" target="_blank">https://trinket.io/sense-hat</a>. L'interface est assez simple. Vous écrivez votre code en python à gauche et vous avez l'émulation du Sense Hat à droite.</p>
-<p><img alt="Sense Hat Emulateur" class="center shadow" src="\assets\images\sense_hat_02.png" /></p>
-<p>Vous avez accès dans à une version de l'émulateur dans le système d'exploitation Raspbian généralement installé sur un Raspberry Pi. Il n'est parcontre pas installé par défaut dans la version lite ou régulière. Si vous avez à installer Raspbian, sélectionnez la version full. Sinon il est toujours possible d'installer l'émulateur sur une installation déjà existante avec les commandes : </p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-sense-emu<span class="w"> </span>python3-sense-emu<span class="w"> </span>sense-emu-tools
-</span></code></pre></div>
-<div class="admonition attention">
-<p class="admonition-title">Attention<p>Si vous développez avec l'émulateur, vos scripts python doivent importer sense_emu au lieu de sense_hat</p>
-<p><code>from sense_emu import SenseHat</code></p>
-</p>
-</div>
-<h2 id="source">Source</h2>
-<ul>
-<li><a href="https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/0" target="_blank">https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/0</a></li>
-</ul>
+<p>Démarrer l'installation une fois le programme téléchargé et ensuite lancez l'application.</p>
+<p><img alt="setup_02" class="center shadow" src="\assets\images\esp32_setup_02.png" /></p>
+<h2 id="configuration-de-lenvironnement">Configuration de l'environnement</h2>
+<p>Encore quelques petites configurations. Dans le programme Arduino IDE, cliquez sur "Tools", "Board", ESP32 Arduino" et "PrefESP32 Wrover Module". Dans le bas de la fenêtre cliquez sur le bouton au bout de la ligne "Additional boards manager URLs".</p>
+<p><img alt="setup_03" class="center shadow" src="\assets\images\esp32_setup_03.png" /></p>
+<p>Ensuite encore dans le menu "Tools" sélectionnez "Port" et le port COM dans lequelle votre ESP32 est connecté. Il ne devrait y en n'avoir qu'un mais sinon retourner voir dans le gestionnaire de périphériques.</p>
+<p><img alt="setup_04" class="center shadow" src="\assets\images\esp32_setup_04.png" /></p>
+<p>Bingo votre portable est connecté à votre ESP32, vous en avez la preuve ici</p>
+<p><img alt="setup_05" class="center shadow" src="\assets\images\esp32_setup_05.png" /></p>
 
 
 

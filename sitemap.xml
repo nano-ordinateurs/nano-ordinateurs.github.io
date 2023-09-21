@@ -2,77 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>http://nano-ordinateur.github.io/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex01_enonce/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex02_enonce/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex03_enonce/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex04_enonce/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/ex05_enonce/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/exercices/formatif_formel/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/_todo/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://nano-ordinateur.github.io/notes_de_cours/esp32/esp32/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://nano-ordinateur.github.io/notes_de_cours/esp32/premier_sketch/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://nano-ordinateur.github.io/notes_de_cours/esp32/serial_monitor/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://nano-ordinateur.github.io/notes_de_cours/esp32/setup/</loc>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/affichage_pixel/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/capteur/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/couleur/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/joystick/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/lancer_script/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/sense_emu/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/sense_hat/sense_hat/</loc>
-         <lastmod>2023-09-14</lastmod>
+         <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

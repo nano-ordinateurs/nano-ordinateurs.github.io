@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/sense_hat/sense_hat/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/esp32/premier_sketch/">
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../setup/">
       
       
-        <link rel="next" href="../sense_emu/">
+        <link rel="next" href="../serial_monitor/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Définitions - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Notre premier sketch - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -81,7 +81,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sense-hat" class="md-skip">
+        <a href="#notre-premier-sketch" class="md-skip">
           Aller au contenu
         </a>
       
@@ -116,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Définitions
+              Notre premier sketch
             
           </span>
         </div>
@@ -233,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../sense_hat/sense_hat/" class="md-tabs__link md-tabs__link--active">
         Notes de cours
       </a>
     </li>
@@ -358,16 +358,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
       
       
       
@@ -376,7 +374,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_2_1">
           <span class="md-nav__icon md-icon"></span>
           Sense Hat
@@ -387,21 +385,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../sense_hat/sense_hat/" class="md-nav__link">
         Définitions
       </a>
-      
     </li>
   
 
@@ -413,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sense_emu/" class="md-nav__link">
+      <a href="../../sense_hat/sense_emu/" class="md-nav__link">
         Émulateur
       </a>
     </li>
@@ -427,7 +415,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lancer_script/" class="md-nav__link">
+      <a href="../../sense_hat/lancer_script/" class="md-nav__link">
         Interragir avec le Sense Hat
       </a>
     </li>
@@ -441,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../couleur/" class="md-nav__link">
+      <a href="../../sense_hat/couleur/" class="md-nav__link">
         Mettre un peu de couleur
       </a>
     </li>
@@ -455,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../affichage_pixel/" class="md-nav__link">
+      <a href="../../sense_hat/affichage_pixel/" class="md-nav__link">
         Afficher sur un pixel
       </a>
     </li>
@@ -469,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../joystick/" class="md-nav__link">
+      <a href="../../sense_hat/joystick/" class="md-nav__link">
         Utilisation du joystick
       </a>
     </li>
@@ -483,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../capteur/" class="md-nav__link">
+      <a href="../../sense_hat/capteur/" class="md-nav__link">
         Capteurs
       </a>
     </li>
@@ -502,14 +490,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
       
       
       
@@ -518,7 +508,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
           Esp32
@@ -531,7 +521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/setup/" class="md-nav__link">
+      <a href="../setup/" class="md-nav__link">
         Configuration
       </a>
     </li>
@@ -543,11 +533,73 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../esp32/premier_sketch/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Notre premier sketch
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Notre premier sketch
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#un-peu-de-mise-en-contexte" class="md-nav__link">
+    Un peu de mise en contexte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-de-nos-programme" class="md-nav__link">
+    Structure de nos programme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premier-petit-test" class="md-nav__link">
+    Premier petit test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enfin-le-sketch" class="md-nav__link">
+    Enfin le sketch
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -559,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/serial_monitor/" class="md-nav__link">
+      <a href="../serial_monitor/" class="md-nav__link">
         Le moniteur série
       </a>
     </li>
@@ -719,6 +771,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#un-peu-de-mise-en-contexte" class="md-nav__link">
+    Un peu de mise en contexte
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structure-de-nos-programme" class="md-nav__link">
+    Structure de nos programme
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#premier-petit-test" class="md-nav__link">
+    Premier petit test
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enfin-le-sketch" class="md-nav__link">
+    Enfin le sketch
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -735,38 +823,61 @@
   
 
 
-<h1 id="sense-hat">Sense Hat</h1>
-<p>Le Sense Hat est un carte d'extension qu'on branche sur un Raspberry Pi (Hat est une abbréviation qui signifie "Hardware Attached on Top") pour étendre ses fonctionnalitées grâce à une série de capteurs: </p>
-<ul>
-<li>Accéléromètre:  pour obtenir la vitesse de déplacement du PI</li>
-<li>Gyroscope: pour capturez le mouvement de rotation du Raspberry Pi</li>
-<li>Magnétomètre: pour mesurer du champ magnétique</li>
-<li>Capteur de pression d’air</li>
-<li>Capteurs de température et d’humidité</li>
-</ul>
-<p>Pour terminer, le Sense Hat possède une matrice de LED 8x8 et un mini-joystick.</p>
-<p><img alt="Sense Hat" class="center" src="\assets\images\sense_hat_01.png" /></p>
-<div class="admonition info">
-<p class="admonition-title">Info<p>À l'origine le Sense Hat se nommait "Astro Pi" et avait été développé dans l'objectif d'envoyer des Raspberry Pi avec capteurs à bord de la Station spatiale internationale (ISS).</p>
-</p>
-</div>
-<h1 id="emulateur-de-sense-hat">Emulateur de Sense Hat</h1>
-<p>Il existe des émulateurs de Sense Hat qui nous permet de créer des scripts et d'interragir avec les capteurs sans avoir besoin de posséder la carte physiquement. </p>
-<p>Vous pouvez en trouver un en ligne à l'adresse <a href="https://trinket.io/sense-hat" target="_blank">https://trinket.io/sense-hat</a>. L'interface est assez simple. Vous écrivez votre code en python à gauche et vous avez l'émulation du Sense Hat à droite.</p>
-<p><img alt="Sense Hat Emulateur" class="center shadow" src="\assets\images\sense_hat_02.png" /></p>
-<p>Vous avez accès dans à une version de l'émulateur dans le système d'exploitation Raspbian généralement installé sur un Raspberry Pi. Il n'est parcontre pas installé par défaut dans la version lite ou régulière. Si vous avez à installer Raspbian, sélectionnez la version full. Sinon il est toujours possible d'installer l'émulateur sur une installation déjà existante avec les commandes : </p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>python-sense-emu<span class="w"> </span>python3-sense-emu<span class="w"> </span>sense-emu-tools
+<h1 id="notre-premier-sketch">Notre premier sketch</h1>
+<h2 id="un-peu-de-mise-en-contexte">Un peu de mise en contexte</h2>
+<p>Les programmes qu'ont va écrire avec Arduino IDE sont appelées des sketches. Chaque programme va être enregistré dans un fichier portant l'extension <strong>ino</strong>. </p>
+<p>Pour compiler un sketch et en même temps vérifier qu'il ne contient pas d'erreur on va utiliser le bouton crochet, le raccourci Ctrl+R ou dans le menu "Sketch" et ensuite "Verify/Compile".</p>
+<p>Pour envoyer un sketch sur le ESP32, cliquez sur le bouton avec la flèche, Ctrl+U ou bien dans le menu "Sketch" et ensuite "Upload".</p>
+<p>Une fois le programme sur le ESP32, il va rouler en boucle tant que le ESP32 est sous tension. Pour l'instant la tension fournis par le cable USB est suffisante, mais on va voir plus tard qu'on doit parfois en fournir plus.</p>
+<h2 id="structure-de-nos-programme">Structure de nos programme</h2>
+<p>Parce que je vous aime et que je sais que vous êtes les meilleurs ont va programmer en C. La structure de nos programme sera sensiblement toujours la même.</p>
+<ol>
+<li>En premier on va importer les librairies requises et déclarer les variables et objets globaux.</li>
+<li>Ensuite nous avons la fonction <code>void setup()</code> qui va contenir du code d'initialisation et qui va être exécutée qu'un fois au démarrage.</li>
+<li>Finalement il y a la fonction <code>void loop()</code> qui va être notre boucle de traitement principale. Cette fonction va tourner en boucle tant que le ESP32 est sous tension.</li>
+<li>On peut aussi déclarer des fonctions à l'extérieur de "setup" et "loop" pour mieux structurer notre code.</li>
+</ol>
+<h2 id="premier-petit-test">Premier petit test</h2>
+<p>Juste un petit programme tout mignon pour s'assurer que tout fonctionne. Dans Arduino IDE on a accès à un moniteur série dans lequel on peut écrire du texte depuis le ESP32. C'est pratique pour débugger ou simplement envoyer des communications. Nous faire un sketch qui va y inscrire du texte au démarrage.</p>
+<ol>
+<li>Créez un nouveau sketch ("File" -&gt; "New Sketch" ou bien Ctrl+N)</li>
+<li>Inscrivez le code suivant : </li>
+</ol>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="c1">// Initialise le port série à une vitesse de 9600 bauds</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="c1">// Affiche le texte Hello dans la console série et saute une ligne</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hello&quot;</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// La fonction loop s&#39;exécute à l&#39;infini</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;world!!&quot;</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="c1">// Marque une pause de 1 seconde</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">}</span>
 </span></code></pre></div>
-<div class="admonition attention">
-<p class="admonition-title">Attention<p>Si vous développez avec l'émulateur, vos scripts python doivent importer sense_emu au lieu de sense_hat</p>
-<p><code>from sense_emu import SenseHat</code></p>
+<h2 id="enfin-le-sketch">Enfin le sketch</h2>
+<p>Maintenant on va essayer de faire clignoter une petite DEL qui se situe sur le ESP32. </p>
+<p><img alt="premier_sketch_01" class="center shadow" src="\assets\images\premier_sketch_01.png" /></p>
+<p>La DEL est associé au GPIO 2, il faut commencer par l'indiquer dans notre code en créant une constante contenant le numéro du GPIO. En fait cette étape n'est pas nécessaire mais simplifie le code quand on travail avec plusieurs "pins".</p>
+<p><code>#define PIN_DEL 2</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note<p>GPIO (General-Purpose Input/Output) sont des connecteurs, ou "pin", qui nous permettent de connecter le ESP32 à un circuit électrique. On peut les visualiser comme des interrupteurs qui peuvent être basculer "On" et "Off".</p>
 </p>
 </div>
-<h2 id="source">Source</h2>
+<p>Ensuite on va initialiser la pin dans la fonction <strong>setup()</strong> et lui indiquer qu'elle va être en mode sortie, "OUTPUT".</p>
+<p><code>pinMode(PIN_DEL, OUTPUT);</code></p>
+<p>Un petit truc, ajoutez un délais à la fin de l'initialisation pour être sur que tout est chargé avant de se lancer dans la boucle de traitement.</p>
+<p>Finalement pour allumer la DEL on va "écrire" dans la pin, on va lui envoyer un signal, HIGH pour l'allumer, LOW pour l'éteindre.</p>
 <ul>
-<li><a href="https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/0" target="_blank">https://projects.raspberrypi.org/en/projects/getting-started-with-the-sense-hat/0</a></li>
+<li>Allume la DEL  : <code>digitalWrite(PIN_DEL, HIGH);</code></li>
+<li>Etteind la DEL : <code>digitalWrite(PIN_DEL, LOW);</code> </li>
 </ul>
+<p><strong>À vous de jouer</strong></p>
+<p>Assemblez tous ces morceaux de robots et écrivez un sketch qui va faire clignoter la DEL en continue à une intervalle de une seconde et demi. Quand la lumière allume inscrivez "On" dans le moniteur série et "Off" quand elle s'éteint.</p>
+<p><strong>Ça fonctionne?</strong></p>
+<p>Maintenant que vous avez une belle petite lumière qui clignote, modifiez votre code pour qu'après 10 clignotement la DEL s'éteingne et que dans le moniteur série on affiche le message "Ok c'est bon on a compris...". La DEL restera ensuite eteinte à moins qu'on redémarre le ESP32.</p>
 
 
 
