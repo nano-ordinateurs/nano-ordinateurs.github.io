@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/exercices/ex05_enonce/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/exercices/ex06_enonce/">
       
       
-        <link rel="prev" href="../ex04_enonce/">
+        <link rel="prev" href="../ex05_enonce/">
       
-      
-        <link rel="next" href="../ex06_enonce/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Exercice 05 - Sense Hat Capteurs - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Exercice 06 - ESP32 - DEL - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -81,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-05-sense-hat-afficher-les-donnees" class="md-skip">
+        <a href="#exercice-06-une-del-qui-clignote" class="md-skip">
           Aller au contenu
         </a>
       
@@ -116,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice 05 - Sense Hat Capteurs
+              Exercice 06 - ESP32 - DEL
             
           </span>
         </div>
@@ -685,6 +683,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../ex05_enonce/" class="md-nav__link">
+        Exercice 05 - Sense Hat Capteurs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -696,69 +708,10 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Exercice 05 - Sense Hat Capteurs
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Exercice 05 - Sense Hat Capteurs
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ecran-temperature" class="md-nav__link">
-    Écran température
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ecran-humidite-et-pression" class="md-nav__link">
-    Écran humidité et pression
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navigation-entre-les-ecrans" class="md-nav__link">
-    Navigation entre les écrans
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex06_enonce/" class="md-nav__link">
         Exercice 06 - ESP32 - DEL
       </a>
+      
     </li>
   
 
@@ -790,35 +743,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table des matières
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ecran-temperature" class="md-nav__link">
-    Écran température
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ecran-humidite-et-pression" class="md-nav__link">
-    Écran humidité et pression
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#navigation-entre-les-ecrans" class="md-nav__link">
-    Navigation entre les écrans
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -835,26 +759,15 @@
   
 
 
-<h1 id="exercice-05-sense-hat-afficher-les-donnees">Exercice 05 - Sense Hat - Afficher les données</h1>
-<p>À l'aide des capteurs de température, de pression et d'humidité, faites afficher dans des écrans séparés les valeurs de chacun.</p>
-<h2 id="ecran-temperature">Écran température</h2>
-<ul>
-<li>Sur les deux première colonnes, affichez une jauge qui sera rempli en fonction de la température. Si la température est au minimum de ce qui peut être capté, la jauge est vide. Si on est au maximum les 8 points des 2 premières colonnes sont remplis. Entre les deux ça sera un ratio.</li>
-<li>Dans l'espace restant sur la matrice de DELs, affichez la lettre T pour température.</li>
-<li>Si on clique sur le joystick, affichez le texte : "Température 12 C" où 12 est la valeur saisie. Revenez ensuite à l'affichage de l'écran.</li>
-</ul>
-<h2 id="ecran-humidite-et-pression">Écran humidité et pression</h2>
-<ul>
-<li>Pour ces deux écrans, afficher la lettre H ou P tout simplement.</li>
-<li>Si on clique sur le joystick, affichez le texte : "Humidité" ou "Pression" suivi de la valeur saisie. Revenez ensuite à l'affichage de l'écran.</li>
-</ul>
-<h2 id="navigation-entre-les-ecrans">Navigation entre les écrans</h2>
-<ul>
-<li>Les touches gauche et droite nous font passer d'un écran à l'autre.</li>
-<li>L'ordre des écrans est "Température" - "Humidité" - "Pression"</li>
-<li>Si on est sur pression et qu'on entre droite, on revient à température. La même chose dans l'autre sens.</li>
-<li>Chaque écran doit avoir une couleur de caractère différente.</li>
-</ul>
+<h1 id="exercice-06-une-del-qui-clignote">Exercice 06 - Une DEL qui clignote</h1>
+<p>Vous devez produire un sketch qui va exécuter les points suivants:</p>
+<ol>
+<li>Vous devez faire clignoter la DEL du ESP32 selon à la fréquence que vous désirée.</li>
+<li>Vous avec l'option de démarrer le clignotement ou de l'arrêter en envoyant une commande par le port série. <code>ON</code> pour démarrer et <code>OFF</code> pour l'arrêter.</li>
+<li>Ajoutez aussi une troisième commande qui va permettre d'ajuster le temps d'attente entre les clignotements de la DEL. La commande sera DELx où x représente un entier en millisecondes. (<code>DEL1500</code> par exemple).</li>
+<li>Quand vous envoyer une des trois commandes elle doivent être appliqué immédiatement au traitement. Par exemple si la DEL est allumée, clignote sur un intervalle de 2 secondes et que vous lancer la commande OFF elle devra s'éteindre aussitôt. Utilisez la bonne méthode pour gèrer le temps d'attente.</li>
+</ol>
+<p>Quand vous avez terminé montrez moi fièrement votre résultat.</p>
 
 
 

@@ -31,6 +31,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>http://nano-ordinateur.github.io/exercices/ex06_enonce/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>http://nano-ordinateur.github.io/exercices/formatif_formel/</loc>
          <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
@@ -42,6 +47,11 @@
     </url>
     <url>
          <loc>http://nano-ordinateur.github.io/notes_de_cours/esp32/esp32/</loc>
+         <lastmod>2023-09-21</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>http://nano-ordinateur.github.io/notes_de_cours/esp32/millis/</loc>
          <lastmod>2023-09-21</lastmod>
          <changefreq>daily</changefreq>
     </url>

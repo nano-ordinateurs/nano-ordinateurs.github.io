@@ -14,7 +14,7 @@
         <link rel="prev" href="../premier_sketch/">
       
       
-        <link rel="next" href="../../../exercices/ex01_enonce/">
+        <link rel="next" href="../millis/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
@@ -603,10 +603,31 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#on-complique-un-peu-les-choses" class="md-nav__link">
+    On complique un peu les choses
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../millis/" class="md-nav__link">
+        Pause dans le traitement
+      </a>
     </li>
   
 
@@ -738,6 +759,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../exercices/ex06_enonce/" class="md-nav__link">
+        Exercice 06 - ESP32 - DEL
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -791,6 +826,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#on-complique-un-peu-les-choses" class="md-nav__link">
+    On complique un peu les choses
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -840,6 +882,13 @@
 <p>Attention, on doit passer en paramètre un caractère et non une chaine de texte, il faut utiliser l'apostrophe (') et non le guillement (").</p>
 <h2 id="on-met-ca-en-pratique">On met ça en pratique</h2>
 <p>Créer un sketch qui va nous permettre d'envoyer deux ordres au ESP32. Chaque ordre sera un mot unique de votre choix. Une des ordres sera de faire allumer la DEL et l'autre l'éteindra.</p>
+<h2 id="on-complique-un-peu-les-choses">On complique un peu les choses</h2>
+<p>Maintenant que votre sketch fonctionne, modifiez le pour utiliser d'autres fonctions de lecture du port série :</p>
+<ol>
+<li>Faites une version qui va utiliser <code>Serial.read()</code></li>
+<li>Faites une deuxième version qui va utiliser <code>Serial.readBytes()</code></li>
+</ol>
+<p>Vous pouvez vous référez à la documentation de Arduino : <a href="https://www.arduino.cc/reference/en/" target="_blank">https://www.arduino.cc/reference/en/</a></p>
 
 
 
