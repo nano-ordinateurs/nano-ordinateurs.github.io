@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/esp32/esp32_pin/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/esp32/potentiometre/">
       
       
-        <link rel="prev" href="../../..">
+        <link rel="prev" href="../bouton/">
       
       
-        <link rel="next" href="../setup/">
+        <link rel="next" href="../../sense_hat/sense_hat/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.9">
     
     
       
-        <title>Les broches du ESP32 - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Potentiomètre - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -80,6 +80,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#le-potentiometre" class="md-skip">
+          Aller au contenu
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -111,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Les broches du ESP32
+              Potentiomètre
             
           </span>
         </div>
@@ -228,7 +233,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../esp32_pin/" class="md-tabs__link md-tabs__link--active">
         Notes de cours
       </a>
     </li>
@@ -382,19 +387,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../esp32_pin/" class="md-nav__link">
         Les broches du ESP32
       </a>
-      
     </li>
   
 
@@ -508,14 +505,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_7" checked>
       
       
       
@@ -524,7 +523,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_2_1_7">
           <span class="md-nav__icon md-icon"></span>
           Capteurs
@@ -549,11 +548,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../potentiometre/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Potentiomètre
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Potentiomètre
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#branchement" class="md-nav__link">
+    Branchement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-lire-sa-valeur" class="md-nav__link">
+    Comment lire sa valeur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-vous-de-jouer" class="md-nav__link">
+    À vous de jouer
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -889,6 +943,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#branchement" class="md-nav__link">
+    Branchement
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comment-lire-sa-valeur" class="md-nav__link">
+    Comment lire sa valeur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-vous-de-jouer" class="md-nav__link">
+    À vous de jouer
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -906,11 +991,42 @@
   
 
 
-  <h1>Les broches du ESP32</h1>
-
-<p>Les broches du ESP32</p>
-<p><img alt="esp32_pin_01" class="center shadow" src="\assets\images\esp32_pin_01.png" /></p>
-<p><a href="\assets\images\esp32_pin_01.png" target="_blank">Image taille réelle</a></p>
+<h1 id="le-potentiometre">Le potentiomêtre</h1>
+<p>Le potentiomêtre est un capteur qui permet d'ajuster l'intensité du cournant qui le traverse. La valeur sera déterminée par selon un angle compris entre 0 (du côté du <em>ground</em>) et 275 degrées.</p>
+<h2 id="branchement">Branchement</h2>
+<p>Le capteur comprends trois broches. Si on met le potientomêtre à plat, avec le "bras" orienté vers le haut et les broches tournées vers nous, les branchements sont les suivants : </p>
+<ul>
+<li>À gauche : La mise à la terre</li>
+<li>Au milieu : La sortie qu'on connecte à un GPIO du ESP32</li>
+<li>À droite : L'alimentation 3.3V ou 5V</li>
+</ul>
+<p><img alt="pot_01.png" class="center" src="\assets\images\pot_01.png" /></p>
+<h2 id="comment-lire-sa-valeur">Comment lire sa valeur</h2>
+<p>On doit faire une lecture analogue de la broche GPIO sur laquelle on a connecté le potentiomêtre. </p>
+<div class="language-c highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// La broche 4 aurait été utilisée</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<p>La valeur lue sera calculée par le esp32 selon l'angle du potentiomêtre et le voltage. Elle sera situé entre 0 et 4095. On peut facilement convertir la valeur selon un autre échelle avec la foncion <code>map()</code>. </p>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">map</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span><span class="w"> </span><span class="n">minOrigine</span><span class="p">,</span><span class="w"> </span><span class="n">maxOrigine</span><span class="p">,</span><span class="w"> </span><span class="n">minDest</span><span class="p">,</span><span class="w"> </span><span class="n">maxDest</span><span class="p">);</span>
+</span></code></pre></div>
+<ul>
+<li>valeur : La valeur à convertir</li>
+<li>minOrigine : La valeur minimum de l'échelle d'origine</li>
+<li>maxOrigine : La valeur maximum de l'échelle d'origine</li>
+<li>minDest : La valeur minimum de l'échelle de destination</li>
+<li>maxDest : La valeur maximum de l'échelle de destination</li>
+</ul>
+<p>Dans l'exemple suivant la valeur passera d'une valeur entre 0 et 4095 à une valeur entre 0 et 100</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple map()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeurMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4095</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span></code></pre></div></td></tr></table></div>
+<h2 id="a-vous-de-jouer">À vous de jouer</h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Créez le montage affiché plus haut et écrivez un sketch qui va écrire à la console avec un intervalle de 500ms la valeur du potentiomêtre.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Ajoutez une DEL à votre montage et trouvez une façon de faire varier son intensité selon la valeur du potentiomêtre. </li>
+</ul>
 
 
 
