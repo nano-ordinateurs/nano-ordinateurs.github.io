@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/exercices/ex09_enonce/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/exercices/ex10_enonce/">
       
       
-        <link rel="prev" href="../ex08_enonce/">
+        <link rel="prev" href="../ex09_enonce/">
       
-      
-        <link rel="next" href="../ex10_enonce/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>Exercice 09 - ESP32 - Jeu Simon - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Exercice 10 - ESP32 - Bluetooth - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -85,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-09-le-jeu-simon" class="md-skip">
+        <a href="#exercice-10-have-a-bluetooth-christmas" class="md-skip">
           Aller au contenu
         </a>
       
@@ -121,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice 09 - ESP32 - Jeu Simon
+              Exercice 10 - ESP32 - Bluetooth
             
           </span>
         </div>
@@ -1135,6 +1133,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../ex09_enonce/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercice 09 - ESP32 - Jeu Simon
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1150,7 +1168,7 @@
           
   
   <span class="md-ellipsis">
-    Exercice 09 - ESP32 - Jeu Simon
+    Exercice 10 - ESP32 - Bluetooth
   </span>
   
 
@@ -1161,7 +1179,7 @@
         
   
   <span class="md-ellipsis">
-    Exercice 09 - ESP32 - Jeu Simon
+    Exercice 10 - ESP32 - Bluetooth
   </span>
   
 
@@ -1183,43 +1201,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#principe-du-jeu" class="md-nav__link">
-    Principe du jeu
+  <a href="#mediagraphie" class="md-nav__link">
+    Mediagraphie
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#montage" class="md-nav__link">
-    Montage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deroulement-du-jeu" class="md-nav__link">
-    Déroulement du jeu
-  </a>
-  
-    <nav class="md-nav" aria-label="Déroulement du jeu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ecran-de-demarrage" class="md-nav__link">
-    Écran de démarrage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ecran-niveau" class="md-nav__link">
-    Écran niveau
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1227,26 +1211,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ex10_enonce/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Exercice 10 - ESP32 - Bluetooth
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1286,43 +1250,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#principe-du-jeu" class="md-nav__link">
-    Principe du jeu
+  <a href="#mediagraphie" class="md-nav__link">
+    Mediagraphie
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#montage" class="md-nav__link">
-    Montage
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#deroulement-du-jeu" class="md-nav__link">
-    Déroulement du jeu
-  </a>
-  
-    <nav class="md-nav" aria-label="Déroulement du jeu">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ecran-de-demarrage" class="md-nav__link">
-    Écran de démarrage
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ecran-niveau" class="md-nav__link">
-    Écran niveau
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1344,57 +1274,200 @@
   
 
 
-<h1 id="exercice-09-le-jeu-simon">Exercice 09 - Le jeu Simon</h1>
-<p>Dans cet exercice on va reproduire le jeu Simon avec notre ESP32. Si vous ne connaissez pas le jeu, vous en avez un aperçu ici : <a href="https://fr.wikipedia.org/wiki/Simon_(jeu)" target="_blank">https://fr.wikipedia.org/wiki/Simon_(jeu)</a></p>
-<p>On va simplifier le montage en n'utilisant que deux couleurs pour notre jeu: jaune et bleu. </p>
-<h2 id="principe-du-jeu">Principe du jeu</h2>
-<p>Le jeu consiste à reproduire une suite de couleur générée aléatoirement. La suite commence par une seule couleur et un nouvel élément s'ajoute à chaque fois que le joueur réussi à reproduire la suite. Exemple : </p>
-<ul>
-<li>Premier round : jaune. </li>
-<li>Deuxième round : jaune, jaune</li>
-<li>Troisième round : jaune, jaune, bleu</li>
-<li>Etc.</li>
+<h1 id="exercice-10-have-a-bluetooth-christmas">Exercice 10 - Have a Bluetooth Christmas</h1>
+<p>Question de se mettre dans l'ambiance des fêtes, nous allons faire jouer une chanson de Noël depuis un cellulaire sur notre ESP32. En résumé nous allons transformer le ESP32 en enceinte Bluetooth.</p>
+<p>Cet exercice est inpiré de l'exercice 29.1 du tutoriel de Freenove sur la programmation du ESP32 en C.</p>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Créez le montage suivant</li>
 </ul>
-<p>Le but du jeu est d'atteindre le round le plus élevé. Le jeu se termine quand on atteint le niveau 100.</p>
-<h2 id="montage">Montage</h2>
-<p>Pour notre jeu, nous allons faire un montage avec : </p>
+<p><img alt="ex10_01" class="center shadow" src="../../assets/images/ex10_01.png" /></p>
+<p>L'image n'est pas très clair. Utilisez un module PCM5102A qui permet d'amplifier le son. Sur le module connecter les broches suivantes : </p>
 <ul>
-<li>Un écran LCD</li>
-<li>Une DEL jaune et une DEL bleu</li>
-<li>Un bouton jaune et un bouton bleu</li>
+<li>BCK -&gt; GPIO 26</li>
+<li>DIN -&gt; GPIO 22</li>
+<li>LCK -&gt; GPIO 25</li>
+<li>VCC -&gt; 5V</li>
+<li>GND -&gt; Mise à la terre</li>
+<li>L+ -&gt; Fil noir du speaker</li>
+<li>L- -&gt; Fil rouge du speaker </li>
 </ul>
-<div class="admonition attention">
-<p class="admonition-title">Attention</p>
-<div class="language-text highlight"><pre><span></span><code>Vous devez tenir compte de l&#39;effet de *debounce* sur vos boutons
-</code></pre></div>
+<p><img alt="ex10_03" class="center shadow" src="../../assets/images/ex10_03.jpg" /></p>
+<p><img alt="ex10_04" class="center shadow" src="../../assets/images/ex10_04.jpg" /></p>
+<p><img alt="ex10_06" class="center shadow" src="../../assets/images/ex10_06.jpg" /></p>
+<p>Copiez le code suivant dans un nouveau croquis en ajustant les broches GPIO au besoin.</p>
+<div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">script.js</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span>
+<span class="normal"><a href="#__codelineno-0-75">75</a></span>
+<span class="normal"><a href="#__codelineno-0-76">76</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/**********************************************************************</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cm">  Filename    : Bluetooth Music By PCM5102</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cm">  Description : Use ESP32 to play the audio received via Bluetooth.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="cm">                Use your phone&#39;s Bluetooth connection to ESP32, </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="cm">                then open the music APP and play the music, </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="cm">                and you&#39;ll hear ESP32 play the phone&#39;s music</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="cm">  Auther      : www.freenove.com</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="cm">  Modification: 2021/12/02</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="cm">**********************************************************************/</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;BluetoothSerial.h&quot;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;driver/i2s.h&quot;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;nvs.h&quot;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;nvs_flash.h&quot;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_bt.h&quot;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;bt_app_core.h&quot;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;bt_app_av.h&quot;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_bt_main.h&quot;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_bt_device.h&quot;</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_gap_bt_api.h&quot;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_a2dp_api.h&quot;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;esp_avrc_api.h&quot;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="cp">#define CONFIG_I2S_LRCK_PIN 25</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="cp">#define CONFIG_I2S_BCK_PIN  26</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="cp">#define CONFIG_I2S_DATA_PIN 22</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="n">BluetoothSerial</span><span class="w"> </span><span class="n">SerialBT</span><span class="p">;</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28"></a>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">  </span><span class="n">SerialBT</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;ESP32&quot;</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Init seccess!&quot;</span><span class="p">);</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33"></a>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">  </span><span class="n">esp_err_t</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nvs_flash_init</span><span class="p">();</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ESP_ERR_NVS_NO_FREE_PAGES</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">err</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">ESP_ERR_NVS_NEW_VERSION_FOUND</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="n">ESP_ERROR_CHECK</span><span class="p">(</span><span class="n">nvs_flash_erase</span><span class="p">());</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nvs_flash_init</span><span class="p">();</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39"></a>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">  </span><span class="n">i2s_config_t</span><span class="w"> </span><span class="n">i2s_config</span><span class="p">;</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">i2s_mode_t</span><span class="p">)(</span><span class="n">I2S_MODE_MASTER</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">I2S_MODE_TX</span><span class="p">);</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42"></a>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">bits_per_sample</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_BITS_PER_SAMPLE_32BIT</span><span class="p">;</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">sample_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">44100</span><span class="p">;</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">channel_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_CHANNEL_FMT_RIGHT_LEFT</span><span class="p">;</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">communication_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">I2S_COMM_FORMAT_STAND_MSB</span><span class="p">;</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">intr_alloc_flags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">dma_buf_count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">dma_buf_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">60</span><span class="p">;</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">  </span><span class="n">i2s_config</span><span class="p">.</span><span class="n">tx_desc_auto_clear</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">  </span><span class="n">i2s_driver_install</span><span class="p">(</span><span class="n">I2S_NUM_0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i2s_config</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52"></a>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">  </span><span class="n">i2s_pin_config_t</span><span class="w"> </span><span class="n">pin_config</span><span class="p">;</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">  </span><span class="n">pin_config</span><span class="p">.</span><span class="n">bck_io_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_I2S_BCK_PIN</span><span class="p">;</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">  </span><span class="n">pin_config</span><span class="p">.</span><span class="n">ws_io_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_I2S_LRCK_PIN</span><span class="p">;</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">  </span><span class="n">pin_config</span><span class="p">.</span><span class="n">data_out_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONFIG_I2S_DATA_PIN</span><span class="p">;</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">  </span><span class="n">pin_config</span><span class="p">.</span><span class="n">data_in_num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">  </span><span class="n">i2s_set_pin</span><span class="p">(</span><span class="n">I2S_NUM_0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pin_config</span><span class="p">);</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59"></a>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">  </span><span class="n">bt_app_task_start_up</span><span class="p">();</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61"></a>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62"></a><span class="w"> </span><span class="cm">/* initialize A2DP sink */</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63"></a><span class="w">  </span><span class="n">esp_a2d_register_callback</span><span class="p">(</span><span class="o">&amp;</span><span class="n">bt_app_a2d_cb</span><span class="p">);</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="w">  </span><span class="n">esp_a2d_sink_register_data_callback</span><span class="p">(</span><span class="n">bt_app_a2d_data_cb</span><span class="p">);</span>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">  </span><span class="n">esp_a2d_sink_init</span><span class="p">();</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66"></a><span class="w">  </span><span class="cm">/* initialize AVRCP controller */</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">  </span><span class="n">esp_avrc_ct_init</span><span class="p">();</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">  </span><span class="n">esp_avrc_ct_register_callback</span><span class="p">(</span><span class="n">bt_app_rc_ct_cb</span><span class="p">);</span>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">  </span><span class="cm">/* set discoverable and connectable mode, wait to be connected */</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="w">  </span><span class="n">esp_bt_gap_set_scan_mode</span><span class="p">(</span><span class="n">ESP_BT_CONNECTABLE</span><span class="p">,</span><span class="w"> </span><span class="n">ESP_BT_GENERAL_DISCOVERABLE</span><span class="p">);</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;ok&quot;</span><span class="p">);</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="p">}</span>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73"></a>
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">(){</span>
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75"></a><span class="w">  </span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Enregistrez le programme et dans le même répertoire que le fichier ino copiez les fichiers inclus dans ce fichier compressé : <a href="../../assets/files/ex10_lib.zip">ex10_lib.zip</a></p>
+<p>Finalement une petite modification dans l'interface de Arduino IDE : </p>
+<p><img alt="ex10_02" class="center shadow" src="../../assets/images/ex10_02.png" /></p>
+<p>Ajustez les valeurs suivante : </p>
+<ul>
+<li><em>Flash Frequency: "80Mhz"</em></li>
+<li><em>Flash Mode: "DOUT"</em></li>
+<li><em>Partition Scheme: "Huge APP (3MB No OTA/1MD SPIFFS)"</em></li>
+</ul>
+<p>Maintenant on teste le tout, téléversez le croquis sur le ESP32, ensuite connectez-vous en Bluetooth avec votre cellulaire. (Vous devrez peut-être refaire un "pairage" si vous aviez fait les exercices des notes de cours sur le Bluetooth).</p>
+<p>Essayez maintenant de faire jouer une chanson de Noël sur votre cellulaire, le son sera diffusé par le speaker de votre montage. Vous pouvez aussi brancher des écouteurs ou des haut-parleurs externe au module PCM5102A</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<ul>
+<li>Il est strictement defendu de faire jouer <em>All I Want For Christmas Is You</em> de Mariah Carer sous peine de lourdes conséquences</li>
+</ul>
 </div>
-<h2 id="deroulement-du-jeu">Déroulement du jeu</h2>
-<h3 id="ecran-de-demarrage">Écran de démarrage</h3>
+<h2 id="mediagraphie">Mediagraphie</h2>
+<p>Les exercices sont extrait et inspiré du tutoriel pour ESP32 en langage C de Freenove :</p>
 <ul>
-<li>Au démarrage, sur l'écran LCD on affiche sur la première ligne "Simon le jeu" et "Meilleur: xxx" sur la deuxième ligne où xxx représente le meilleur niveau atteint par les joueurs. (Le record se réinitialise à chaque démarrage)</li>
-<li>Le jeu va commencer si on appuie sur un des deux boutons.</li>
-</ul>
-<h3 id="ecran-niveau">Écran niveau</h3>
-<ul>
-<li>Pour chaque niveau:<ul>
-<li>Affiche "Niveau x" sur la première ligne et "Mémorise" sur la deuxième (x représente le niveau actuel)</li>
-<li>Reproduit la suite sur les DEL pendant 1 secondes par élément.</li>
-<li>Ensuite affiche "Niveau x" sur la première ligne et "Votre tour" sur la deuxième ligne</li>
-<li>Il n'y a pas de limite de temps pour le joueur</li>
-<li>Le joueur doit reproduire la suite avec les boutons aux couleurs correspondantes</li>
-</ul>
-</li>
-<li>Si le joueur se trompe dans la suite<ul>
-<li>Affiche ""Niveau x" sur la première ligne et "Erreur" sur la deuxième</li>
-<li>Après 5 secondes affiche partie terminé sur la deuxième ligne</li>
-<li>Après 5 secondes affiche l'écran de démarrage.</li>
-</ul>
-</li>
-<li>Si le joueur réussi<ul>
-<li>Affiche "Niveau x" sur la première ligne et "Bravo" sur la deuxième</li>
-<li>Après 5 secondes affiche un nouveau niveau</li>
-</ul>
-</li>
+<li>www.freenove.com. (n.d.). C_Tutorial.pdf Page 316-322</li>
 </ul>
 
 
