@@ -1200,18 +1200,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#brancher-une-cle-usb" class="md-nav__link">
+  <a href="#brancher-une-cle-usb-optionnel" class="md-nav__link">
     <span class="md-ellipsis">
-      Brancher une clé usb
+      Brancher une clé usb (optionnel)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#partage-de-fichier-avec-le-pi" class="md-nav__link">
+  <a href="#partage-de-fichier-avec-le-pi-optionnel" class="md-nav__link">
     <span class="md-ellipsis">
-      Partage de fichier avec le PI
+      Partage de fichier avec le Pi (optionnel)
     </span>
   </a>
   
@@ -1518,18 +1518,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#brancher-une-cle-usb" class="md-nav__link">
+  <a href="#brancher-une-cle-usb-optionnel" class="md-nav__link">
     <span class="md-ellipsis">
-      Brancher une clé usb
+      Brancher une clé usb (optionnel)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#partage-de-fichier-avec-le-pi" class="md-nav__link">
+  <a href="#partage-de-fichier-avec-le-pi-optionnel" class="md-nav__link">
     <span class="md-ellipsis">
-      Partage de fichier avec le PI
+      Partage de fichier avec le Pi (optionnel)
     </span>
   </a>
   
@@ -1559,11 +1559,11 @@
 
 
 <h1 id="exercice-03-exploration-raspberry-pi-et-linux">Exercice 03 - Exploration Raspberry pi et Linux</h1>
-<p>Dans cet exercice on va aller un peu plus loin dans l'exploration de Raspberry pi os. </p>
+<p>Dans cet exercice on va aller un peu plus loin dans l'exploration de Raspberry Pi os. </p>
 <h2 id="configuration-initiale">Configuration initiale</h2>
 <h3 id="installation-de-raspberry-pi-os">Installation de Raspberry Pi OS</h3>
 <ul>
-<li>Sur une carte microSD installer <mark class="critic">Raspberry Pi OS Lite</mark> à l'aide de Raspberry pi image dans effectuer de configuration avancé (Pas de création d'usager, de configuration du WiFi, etc.)</li>
+<li>Sur une carte microSD installer <mark class="critic">Raspberry Pi OS Lite</mark> à l'aide de Raspberry Pi Imager sans effectuer de configuration avancée (Pas de création d'usager, de configuration du WiFi, etc.)</li>
 </ul>
 <h3 id="configuration-au-premier-demarrage">Configuration au premier démarrage</h3>
 <p>Lors du premier démarrage, effectuer les configurations suivantes : </p>
@@ -1573,15 +1573,16 @@
 <li>Ajuster le timezone sur <code>Montreal</code>.</li>
 </ul>
 <h2 id="a-faire">À faire</h2>
-<p>Je veux que vous notiez dans un fichier texte les commandes, package et logiciel que vous avez utilisés pour réaliser les points suivants.</p>
+<p>Notez dans un fichier texte les commandes, packages et logiciels que vous avez utilisés pour réaliser les points suivants.</p>
 <h3 id="configuration-du-wifi">Configuration du Wifi</h3>
 <ul>
-<li>Configurez le wifi (raspi-config) pour les réseaux <code>Domotique-Pedago</code> et <code>TechInfo</code>. <ul>
-<li>Affichez les interfaces réseaux du PI.</li>
-<li>Pour chacun des réseaux, configurez une adresse ip fixe. Utilisez le numéro de votre pi comme dernier octet de l'adresse ip.</li>
+<li>Configurez le wifi (nmtui) pour les réseaux <code>Domotique-Pedago</code> et <code>TechInfo</code>. <ul>
+<li>Affichez les interfaces réseaux du Pi.</li>
 <li>Trouvez l'adresse de gateway</li>
 <li>Trouvez la ou les adresses des serveurs DNS (Domain server)</li>
-<li>Ajouter les infos dans le bon fichier.</li>
+<li>Configurez une adresse ip fixe. Le professeur nous fournira l`adresse IP à utiliser. </li>
+<li>Configure le Default Gateway et le DNS pour l'adresse IP fixe</li>
+<li>nmtui requiert un service network-manager restart</li>
 </ul>
 </li>
 </ul>
@@ -1633,22 +1634,22 @@
 <h3 id="terminer-un-processus">Terminer un processus</h3>
 <ul>
 <li>Lancez un des jeux que vous avez installé.</li>
-<li>Sans le quitter, ouvrez une nouveaux terminal.</li>
+<li>Sans le quitter, ouvrez un nouveau terminal.</li>
 <li>Retrouvez le id du processus du jeu et terminez le.</li>
-<li>Fermez le teminal et revenez à celui de départ pour voir si le processus à bien été terminé.</li>
+<li>Fermez le terminal et revenez à celui de départ pour voir si le processus a bien été terminé.</li>
 </ul>
-<h3 id="brancher-une-cle-usb">Brancher une clé usb</h3>
+<h3 id="brancher-une-cle-usb-optionnel">Brancher une clé usb (optionnel)</h3>
 <ul>
-<li>Branchez une clé usb dans votre pi et faites le nécessaire pour qu'elle soit "monté" sur le répertoire <code>/mnt/cle_usb</code></li>
+<li>Branchez une clé usb dans votre Pi et faites le nécessaire pour qu'elle soit "montée" sur le répertoire <code>/mnt/cle_usb</code></li>
 <li>Essayer les deux méthodes décrites dans cet article : <a href="https://raspberrytips.com/mount-usb-drive-raspberry-pi/" target="_blank">https://raspberrytips.com/mount-usb-drive-raspberry-pi/</a> Attention j'ai eu à changer les options de la commande <code>mount</code></li>
 </ul>
-<h3 id="partage-de-fichier-avec-le-pi">Partage de fichier avec le PI</h3>
-<p>Vous devez partager un répertoire de votre pi pour que vous puissiez y accéder depuis votre portable sous windows.</p>
+<h3 id="partage-de-fichier-avec-le-pi-optionnel">Partage de fichier avec le Pi (optionnel)</h3>
+<p>Vous devez partager un répertoire de votre Pi pour que vous puissiez y accéder depuis votre portable sous Windows.</p>
 <ul>
 <li>Installez Samba</li>
-<li>Créez un répertoire shared à la racine de votre pi <code>/shared</code> qui pourra être modifié par tous les usagers.</li>
-<li>Partager ce répertoire en lecture et écritue</li>
-<li>Créez aussi un deuxième partage pour la clé usb que vous avez monté plus tôt.</li>
+<li>Créez un répertoire shared à la racine de votre Pi <code>/shared</code> qui pourra être modifié par tous les usagers.</li>
+<li>Partager ce répertoire en lecture et écriture</li>
+<li>Créez aussi un deuxième partage pour la clé usb que vous avez montée plus tôt.</li>
 <li>Le tout devrait être accessible depuis votre portable (Connectez un lecteur réseau)</li>
 </ul>
 

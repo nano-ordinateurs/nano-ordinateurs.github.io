@@ -1265,11 +1265,14 @@
 <h1 id="exercice-06-une-del-qui-clignote">Exercice 06 - Une DEL qui clignote</h1>
 <p>Vous devez produire un sketch qui va exécuter les points suivants:</p>
 <ol>
-<li>Vous devez faire clignoter la DEL du ESP32 selon à la fréquence que vous désirée.</li>
+<li>Vous devez faire clignoter la DEL du ESP32 selon la fréquence que vous désirez.</li>
 <li>Vous avec l'option de démarrer le clignotement ou de l'arrêter en envoyant une commande par le port série. <code>ON</code> pour démarrer et <code>OFF</code> pour l'arrêter.</li>
 <li>Ajoutez aussi une troisième commande qui va permettre d'ajuster le temps d'attente entre les clignotements de la DEL. La commande sera DELx où x représente un entier en millisecondes. (<code>DEL1500</code> par exemple).</li>
-<li>Quand vous envoyer une des trois commandes elle doivent être appliqué immédiatement au traitement. Par exemple si la DEL est allumée, clignote sur un intervalle de 2 secondes et que vous lancer la commande OFF elle devra s'éteindre aussitôt. Utilisez la bonne méthode pour gèrer le temps d'attente.</li>
+<li>Quand vous envoyez une des trois commandes elle doivent être appliquées immédiatement au traitement. Par exemple si la DEL est allumée, clignote sur un intervalle de 2 secondes et que vous lancer la commande OFF elle devra s'éteindre aussitôt. Utilisez la bonne méthode pour gèrer le temps d'attente.</li>
 </ol>
+<p>Indices
+- Ne pas utiliser delay()
+- Serial.setTimeout()</p>
 <p>Quand vous avez terminé montrez moi fièrement votre résultat.</p>
 
 
