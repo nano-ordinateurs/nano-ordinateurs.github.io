@@ -22,7 +22,7 @@
     
     
       
-        <title>Configuration - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Installation Arduino IDE - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuration" class="md-skip">
+        <a href="#installation" class="md-skip">
           Aller au contenu
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Configuration
+              Installation Arduino IDE
             
           </span>
         </div>
@@ -485,7 +485,7 @@
         
   
   <span class="md-ellipsis">
-    Interragir avec le Sense Hat
+    Interagir avec le Sense Hat
   </span>
   
 
@@ -689,7 +689,7 @@
           
   
   <span class="md-ellipsis">
-    Configuration
+    Installation Arduino IDE
   </span>
   
 
@@ -700,7 +700,7 @@
         
   
   <span class="md-ellipsis">
-    Configuration
+    Installation Arduino IDE
   </span>
   
 
@@ -1358,8 +1358,8 @@
   
 
 
-<h1 id="configuration">Configuration</h1>
-<p>Avant de pouvoir exécuter des scripts sur le ESP32 on doit faire quelques petites configurations. </p>
+<h1 id="installation">Installation</h1>
+<p>Avant de pouvoir exécuter des scripts sur le ESP32 nous devons installer le pilote de périphérique pour communiquer avec le ESP et le logiciel Arduino IDE</p>
 <h2 id="installation-des-drivers-ch340">Installation des drivers CH340</h2>
 <p>Pour transérer notre code il faut installer le driver CH340 sur notre ordinateur. </p>
 <p>Commencez par connecter le ESP32 à l'ordinateur à l'aide du cable USB.</p>
@@ -1375,12 +1375,14 @@
 <p>Démarrer l'installation une fois le programme téléchargé et ensuite lancez l'application.</p>
 <p><img alt="setup_02" class="center shadow" src="\assets\images\esp32_setup_02.png" /></p>
 <h2 id="configuration-de-lenvironnement">Configuration de l'environnement</h2>
-<p>Encore quelques petites configurations. Dans le programme Arduino IDE, cliquez sur "Tools", "Board", ESP32 Arduino" et "PrefESP32 Wrover Module". Dans le bas de la fenêtre cliquez sur le bouton au bout de la ligne "Additional boards manager URLs".</p>
-<p><img alt="setup_03" class="center shadow" src="\assets\images\esp32_setup_03.png" /></p>
-<p>Ensuite encore dans le menu "Tools" sélectionnez "Port" et le port COM dans lequelle votre ESP32 est connecté. Il ne devrait y en n'avoir qu'un mais sinon retourner voir dans le gestionnaire de périphériques.</p>
-<p><img alt="setup_04" class="center shadow" src="\assets\images\esp32_setup_04.png" /></p>
+<p>Encore quelques petites configurations. Dans le programme Arduino IDE, cliquez sur "Tools", "Board", "Board Manager" et "ESP32 by Expressif" </p>
+<p><img alt="setup_03" class="center shadow" src="\assets\images\Arduino_esp32_1_board_manager.png" /></p>
+<p>Ensuite dans la barre en haut selectionner le drop-down Select Board and Port</p>
+<p><img alt="setup_04" class="center shadow" src="\assets\images\Arduino_esp32_2_Select_Board_and_port.png" /></p>
+<p>Spécifiez votre Port COM (varie d'un ordinateur à l'autre) et le modèle de board "ESP32 WROVER KIT"</p>
+<p><img alt="setup_05" class="center shadow" src="\assets\images\Arduino_esp32_3_Select_Board.png" /></p>
 <p>Bingo votre portable est connecté à votre ESP32, vous en avez la preuve ici</p>
-<p><img alt="setup_05" class="center shadow" src="\assets\images\esp32_setup_05.png" /></p>
+<p><img alt="setup_06" class="center shadow" src="\assets\images\esp32_setup_05.png" /></p>
 
 
 
