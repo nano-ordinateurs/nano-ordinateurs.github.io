@@ -965,9 +965,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#resistance-interne" class="md-nav__link">
+  <a href="#cicuit-interne" class="md-nav__link">
     <span class="md-ellipsis">
-      Résistance interne
+      Cicuit interne
     </span>
   </a>
   
@@ -1332,9 +1332,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#resistance-interne" class="md-nav__link">
+  <a href="#cicuit-interne" class="md-nav__link">
     <span class="md-ellipsis">
-      Résistance interne
+      Cicuit interne
     </span>
   </a>
   
@@ -1374,22 +1374,26 @@
 
 <h1 id="boutons">Boutons</h1>
 <p>Le bouton est un petit dispositif physique qui va permettre au courant de passer ou non. Quand le bouton est appuyé, le circuit interne est fermé et le courant passe. Il nous est possible de "lire" par une broche si le courant passe ou non et d'exécuter du code en conséquence.</p>
-<p>Les boutons avec lesquels nous allons travailler sont composés de 4 broches disposées par deux sur deux côtés opposés. Les broches du boutons sont reliées entre elles de la façon suivante: en plaçant le bouton face contre nous, un des côté avec des broches vers le haut, les broches de gauche sont reliées entre elle et celles de droite aussi.</p>
+<p>Les boutons avec lesquels nous allons travailler sont composés de 4 broches disposées par deux sur deux côtés opposés. Les broches du bouton sont reliées entre elles de la façon suivante: en plaçant le bouton face contre nous, un des côtés avec des broches vers le haut, les broches de gauche sont reliées entre elles et celles de droite aussi.</p>
 <p><img alt="button_01" class="center shadow" src="\assets\images\button_01.png" /></p>
 <h2 id="branchement-du-bouton">Branchement du bouton</h2>
-<p>Quand le bouton est relâché, il est dans un état indéterminé qui ne correspond pas nécessairement à l'état réel du bouton. Pour palier à ce problème on va utiliser une résistance qui forcera l'état du bouton. On peut utiliser une résistance interne du ESP32 ou bien utiliser une résistance physique comme on l'a fait avec les DELs.</p>
-<h3 id="resistance-interne">Résistance interne</h3>
-<p>Pour relier un bouton en utilisant la résistance interne on va brancher une broche du haut a un port GPIO et une broche du bas en diagonal à la mise à la terre.</p>
+<p>Quand le bouton est relâché, il est dans un état indéterminé ("flottant") qui ne correspond pas nécessairement à l'état réel du bouton. Pour palier à ce problème on va utiliser une connexion au neutre ("LOW") ou à la source de tension ("HIGH") via une résistance. La connexion stabilise la lecture sur la broche quand le bouton est relâché.  </p>
+<p>Un tel circuit est appelé "PULL-DOWN" quand la connexion est faite avec le neutre ("LOW") quand le bouton est relâché et "PULL-UP" quand la connexion est vers la source de tension ("HIGH") </p>
+<p>On peut utiliser un circuit interne du ESP32 pour les PULL-DOWN/PULL-UP ou bien utiliser un circuit externe avec résistance physique.</p>
+<h3 id="cicuit-interne">Cicuit interne</h3>
+<p>Pour relier un bouton en utilisant la résistance interne on va brancher une broche du haut a un port GPIO et une broche du bas en diagonale à la mise à la terre.  La broche va être connectée directement au neutre quand le bouton est appuyé (lecture de "LOW")</p>
 <p><img alt="button_02" class="center" src="\assets\images\button_02.png" /></p>
+<p><img alt="button_03" class="center" src="\assets\images\button_03.png" /></p>
 <p>Ensuite dans le code on va encore s'initialiser une constante avec le numéro du GPIO où le bouton est branché. </p>
-<p><code>#define PIN_BUTTON 8;</code></p>
-<p>Dans la fonction setup() on va initialiser la broche avec pinMode et INPUT_PULLUP pour indiquer qu'on utilise la résistance interne.</p>
+<p><code>#define PIN_BUTTON 8</code></p>
+<p>Dans la fonction setup() on va initialiser la broche avec pinMode à INPUT_PULLUP pour indiquer qu'on utilise le circuit interne qui va indiquer HIGH quand le bouton est relâché.</p>
 <p><code>pinMode(PIN_BUTTON, INPUT_PULLUP);</code></p>
 <p>La fonction digitalRead() va nous retourner un byte : 0 (LOW) ou 1 (HIGH).</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">byte</span><span class="w"> </span><span class="n">etatBouton</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">digitalRead</span><span class="p">(</span><span class="n">PIN_BUTTON</span><span class="p">);</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">etatBouton</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">LOW</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// ...</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">}</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="c1">// Broche relié au neutre:  bouton appuyé</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="a-vous-de-jouer">À vous de jouer</h2>
 <ul class="task-list">
