@@ -1360,7 +1360,12 @@
 
 <h1 id="connexion-bluetooth">Connexion Bluetooth</h1>
 <p>Le ESP32 possède une interface Bluetooth qu'on peut utiliser pour connecter un appareil. Dans une connexion Bluetooth il y a un appareil en mode <em>Master</em> qui va peut se connecter à d'autres appareils en mode <em>slave</em>. Habituellement le ESP32 sera en mode <em>slave</em>.</p>
-<p>Pour gérer la connexion nous allons utiliser la librairie <code>BluetoothSerial.h</code> qui est déjà installé avec Arduino IDE. L'appareil <em>Master</em> sera votre téléphone portable qui utilisera l'application <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&amp;hl=fr&amp;gl=US" target="_blank">Serial Bluetooth Terminal</a>. Cette </p>
+<p>Pour gérer la connexion nous allons utiliser la librairie <code>BluetoothSerial.h</code> qui est déjà installé avec Arduino IDE. L'appareil <em>Master</em> sera soit:</p>
+<ul>
+<li>Votre téléphone portable Android qui utilisera l'application <a href="https://play.google.com/store/apps/details?id=de.kai_morich.serial_bluetooth_terminal&amp;hl=fr&amp;gl=US" target="_blank">Serial Bluetooth Terminal</a>. </li>
+<li>Votre ordinateur Windows avec l'application <a href="https://apps.microsoft.com/detail/9nrs6v7h0n9b">Bluetooth Serial Tool</a></li>
+</ul>
+<p>La librairie BluetoothSerial utilise le profil <a href="https://www.bluetooth.com/specifications/specs/serial-port-profile-1-1/">SPP</a>, qui n'est pas supporté par iOS, donc ne peut communiquer avec les iPhones.  L'utilisation de BLE pourrait le permettre. <a href="https://forum.arduino.cc/t/esp32-bluetooth-from-ios/954195/2">détails</a></p>
 <h2 id="premier-test-de-connexion">Premier test de connexion</h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> Installez <strong>Serial Bluetooth Terminal</strong> sur votre téléphone portable.</li>
