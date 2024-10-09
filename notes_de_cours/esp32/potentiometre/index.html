@@ -1360,8 +1360,8 @@
   
 
 
-<h1 id="le-potentiometre">Le potentiomêtre</h1>
-<p>Le potentiomêtre est un capteur qui permet d'ajuster l'intensité du cournant qui le traverse. La valeur sera déterminée par selon un angle compris entre 0 (du côté du <em>ground</em>) et 275 degrées.</p>
+<h1 id="le-potentiometre">Le potentiomètre</h1>
+<p>Le potentiomètre est un capteur qui permet d'appliquer une résistance variable sur une broche et en conséquence une lecture de tension qui varie continuellement avec la position du contrôle. La valeur sera déterminée par selon un angle compris entre 0 (du côté du <em>ground</em>) et 275 degrées.</p>
 <h2 id="branchement">Branchement</h2>
 <p>Le capteur comprends trois broches. Si on met le potientomêtre à plat, avec le "bras" orienté vers le haut et les broches tournées vers nous, les branchements sont les suivants : </p>
 <ul>
@@ -1371,12 +1371,14 @@
 </ul>
 <p><img alt="pot_01.png" class="center" src="\assets\images\pot_01.png" /></p>
 <h2 id="comment-lire-sa-valeur">Comment lire sa valeur</h2>
-<p>On doit faire une lecture analogue de la broche GPIO sur laquelle on a connecté le potentiomêtre. </p>
+<p>On doit faire une lecture analogue de la broche GPIO sur laquelle on a connecté le potentiomètre. </p>
 <div class="language-c highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
-<span class="normal"><a href="#__codelineno-0-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">// La broche 4 aurait été utilisée</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">#define BROCHE_POTENT 4</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">pinMode</span><span class="p">(</span><span class="n">BROCHE_POTENT</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">BROCHE_POTENT</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
-<p>La valeur lue sera calculée par le esp32 selon l'angle du potentiomêtre et le voltage. Elle sera situé entre 0 et 4095. On peut facilement convertir la valeur selon un autre échelle avec la foncion <code>map()</code>. </p>
+<p>La valeur lue sera calculée par le esp32 selon l'angle du potentiomètre et le voltage résultant. L'échantillonneur (sampler) du ESP32 a un résolution de 12 bit, donc la valeur lue sera située entre 0 et 4095 (2<sup>12</sup>). On peut facilement convertir la valeur selon un autre échelle avec la foncion <code>map()</code>. </p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">map</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span><span class="w"> </span><span class="n">minOrigine</span><span class="p">,</span><span class="w"> </span><span class="n">maxOrigine</span><span class="p">,</span><span class="w"> </span><span class="n">minDest</span><span class="p">,</span><span class="w"> </span><span class="n">maxDest</span><span class="p">);</span>
 </span></code></pre></div>
 <ul>
@@ -1388,8 +1390,10 @@
 </ul>
 <p>Dans l'exemple suivant la valeur passera d'une valeur entre 0 et 4095 à une valeur entre 0 et 100</p>
 <div class="language-c highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Exemple map()</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeurMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4095</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">pinMode</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">INPUT</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeur</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">valeurMap</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">map</span><span class="p">(</span><span class="n">valeur</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">4095</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
 </span></code></pre></div></td></tr></table></div>
 <h2 id="a-vous-de-jouer">À vous de jouer</h2>
 <ul class="task-list">
