@@ -1310,23 +1310,25 @@
 
 <h1 id="pwm-pulse-width-modulation">PWM (Pulse-Width Modulation)</h1>
 <ul>
-<li>Signal de sortie binaire (0V ou 3.3V) donc le % de temps à 3.3V (<em>duty cycle</em>) est controllable</li>
-<li>Utilisé pour le controle de servomoteurs et autres équipements</li>
+<li>Signal de sortie binaire (0V ou 3.3V) donc le % de temps à 3.3V (<em>duty cycle</em>) est contrôlable</li>
+<li>Utilisé pour le contrôle de servomoteurs et autres équipements</li>
 <li>Peut servir à controller le niveau de luminosité d'une DEL</li>
-<li>Toutes les broches en sortie de l'ESP32 peuvent générer un signal PWM</li>
+<li>Toutes les broches en sortie de l'ESP32 peuvent générer un signal PWM (broches 1 à 32)</li>
 </ul>
-<p>La fonction a utiliser est analogWrite(). (attention le nom est trompeur, seule la sortie du DAC est véritablement analogique)</p>
+<p>La fonction a utiliser est <em>analogWrite()</em>. </p>
 <h1 id="dac-digital-to-analog-converter">DAC (Digital-to-Analog Converter)</h1>
 <ul>
 <li>2 canaux DAC (résolution 8-bit) sont disponibles sur le ESP32, via les broches 25 et 26 seulement</li>
 <li>Génèrent un véritable signal analogique variant de 0V à 3.3V</li>
 <li>Peuvent servir à controller l'intensité de DELs (ex. strips de DEL RGB), générer du son ou controller des jauges analogiques </li>
-<li>3 modes d'opération
--- Sortie directe de valeur analogique avec <em>dacWrite()</em>
--- Sortie de signal via un tableau de valeurs en mémoire 
--- Génération de signal sinusoidal d'une fréquence et amplitude donnée</li>
+<li>3 modes d'opération<ul>
+<li>Sortie directe de valeur analogique avec <em>dacWrite()</em></li>
+<li>Sortie de signal via un tableau de valeurs en mémoire </li>
+<li>Génération de signal sinusoidal d'une fréquence et amplitude donnée</li>
 </ul>
-<p>Librairie Arduino à utiliser: <em>DacESP32</em></p>
+</li>
+</ul>
+<p>Librairie Arduino à utiliser: <strong>DacESP32</strong></p>
 <p><a href="https://dronebotworkshop.com/esp32-dac/">Plus d'info sur le site DroneBot Workshop</a></p>
 
 
