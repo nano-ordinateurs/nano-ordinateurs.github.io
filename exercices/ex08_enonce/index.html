@@ -22,7 +22,7 @@
     
     
       
-        <title>Exercice 08 - ESP32 - Servomoteur - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Exercice 08 - ESP32 - Servomoteur et DAC - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#exercice-08-servomoteur" class="md-skip">
+        <a href="#exercice-08-servomoteur-et-dac" class="md-skip">
           Aller au contenu
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercice 08 - ESP32 - Servomoteur
+              Exercice 08 - ESP32 - Servomoteur et DAC
             
           </span>
         </div>
@@ -933,9 +933,51 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_de_cours/esp32/servo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Servomoteurs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes_de_cours/esp32/pwm_dac/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PWM et DAC
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1166,7 +1208,7 @@
         
   
   <span class="md-ellipsis">
-    Exercice 08 - ESP32 - Servomoteur
+    Exercice 08 - ESP32 - Servomoteur et DAC
   </span>
   
 
@@ -1262,8 +1304,10 @@
   
 
 
-<h1 id="exercice-08-servomoteur">Exercice 08 - Servomoteur</h1>
-<p>L'objectif de cet exercice est d'explorer par vous-même le fonctionnement d'un servomoteur. Vous devez faire un montage avec un servomoteur et un potentiomètre. L'angle de rotation du servomoteur sera déterminé par la valeur du potentiomètre et une modification de celle-ci entrainera la rotation du servomoteur.</p>
+<h1 id="exercice-08-servomoteur-et-dac">Exercice 08 - Servomoteur et DAC</h1>
+<p>L'objectif de cet exercice est d'explorer le fonctionnement d'un servomoteur et des canaux de DAC. </p>
+<p>Vous devez faire un montage avec un servomoteur, un <em>buzzer</em> passif (électronique exposée en-dessous) et un potentiomètre.</p>
+<p>L'angle de rotation du servomoteur sera déterminé par la valeur du potentiomètre et une modification de celle-ci entrainera la rotation du servomoteur. De plus, émetter avec le <em>buzzer</em> un son grave quand le servo-moteur va dans un sens, et un son aigu quand il va dans l'autre sens. Utiliser le générateur d'onde en sinus du DAC pour générer les sons (bonus: utiliser des fréquences correspondant à des notes de musique).</p>
 <p>Dans votre sketch inscrivez en commentaire les sources où vous avez récupérées vos informations (url des sites consultés). Une fois l'exercice terminé remettez moi le sketch dans le devoir sur Teams.</p>
 <p><img alt="servo_01.jpg" class="center shadow" src="\assets\images\servo_01.jpg" /></p>
 

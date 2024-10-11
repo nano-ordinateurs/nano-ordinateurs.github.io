@@ -1213,7 +1213,7 @@
         
   
   <span class="md-ellipsis">
-    Exercice 08 - ESP32 - Servomoteur
+    Exercice 08 - ESP32 - Servomoteur et DAC
   </span>
   
 
@@ -1316,19 +1316,18 @@
 <li>Toutes les broches en sortie de l'ESP32 peuvent générer un signal PWM</li>
 </ul>
 <p>La fonction a utiliser est analogWrite(). (attention le nom est trompeur, seule la sortie du DAC est véritablement analogique)</p>
-<p>|</p>
 <h1 id="dac-digital-to-analog-converter">DAC (Digital-to-Analog Converter)</h1>
 <ul>
 <li>2 canaux DAC (résolution 8-bit) sont disponibles sur le ESP32, via les broches 25 et 26 seulement</li>
 <li>Génèrent un véritable signal analogique variant de 0V à 3.3V</li>
-<li>Peuvent servir à controller l'intensité de DELs (ex. strips de DEL RGB), générer du son ou controller des affichages analogiques </li>
+<li>Peuvent servir à controller l'intensité de DELs (ex. strips de DEL RGB), générer du son ou controller des jauges analogiques </li>
 <li>3 modes d'opération
 -- Sortie directe de valeur analogique avec <em>dacWrite()</em>
 -- Sortie de signal via un tableau de valeurs en mémoire 
 -- Génération de signal sinusoidal d'une fréquence et amplitude donnée</li>
 </ul>
 <p>Librairie Arduino à utiliser: <em>DacESP32</em></p>
-<p><a href="https://dronebotworkshop.com/esp32-servo/">Plus d'info sur le site DroneBot Workshop</a></p>
+<p><a href="https://dronebotworkshop.com/esp32-dac/">Plus d'info sur le site DroneBot Workshop</a></p>
 
 
 
