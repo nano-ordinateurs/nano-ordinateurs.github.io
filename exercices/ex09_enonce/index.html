@@ -1446,7 +1446,7 @@
 
 <h1 id="exercice-09-le-jeu-simon">Exercice 09 - Le jeu Simon</h1>
 <p>Dans cet exercice on va reproduire le jeu Simon avec notre ESP32. Si vous ne connaissez pas le jeu, vous en avez un aperçu ici : <a href="https://fr.wikipedia.org/wiki/Simon_(jeu)" target="_blank">https://fr.wikipedia.org/wiki/Simon_(jeu)</a></p>
-<p>On va simplifier le montage en n'utilisant que deux couleurs pour notre jeu: jaune et bleu. </p>
+<p>On va simplifier le montage en n'utilisant que deux couleurs pour notre jeu: jaune et bleu  </p>
 <h2 id="principe-du-jeu">Principe du jeu</h2>
 <p>Le jeu consiste à reproduire une suite de couleur générée aléatoirement. La suite commence par une seule couleur et un nouvel élément s'ajoute à chaque fois que le joueur réussi à reproduire la suite. Exemple : </p>
 <ul>
@@ -1455,17 +1455,19 @@
 <li>Troisième round : jaune, jaune, bleu</li>
 <li>Etc.</li>
 </ul>
-<p>Le but du jeu est d'atteindre le round le plus élevé. Le jeu se termine quand on atteint le niveau 100.</p>
+<p>Le but du jeu est d'atteindre le round le plus élevé. Le jeu se termine quand on atteint le niveau 20.</p>
 <h2 id="montage">Montage</h2>
 <p>Pour notre jeu, nous allons faire un montage avec : </p>
 <ul>
 <li>Un écran LCD</li>
 <li>Une DEL jaune et une DEL bleu</li>
 <li>Un bouton jaune et un bouton bleu</li>
+<li>Un <em>buzzer</em> passif</li>
 </ul>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<div class="language-text highlight"><pre><span></span><code>Vous devez tenir compte de l&#39;effet de *debounce* sur vos boutons
+<div class="language-text highlight"><pre><span></span><code>Vous devez tenir compte de l&#39;effet de *debounce* sur vos boutons.
+Utilisez la fonction *outputCW* de la librairie *DacESP32* pour vous assurez que votre code répond toujours lors de la génération de sons.
 </code></pre></div>
 </div>
 <h2 id="deroulement-du-jeu">Déroulement du jeu</h2>
@@ -1478,24 +1480,31 @@
 <ul>
 <li>Pour chaque niveau:<ul>
 <li>Affiche "Niveau x" sur la première ligne et "Mémorise" sur la deuxième (x représente le niveau actuel)</li>
-<li>Reproduit la suite sur les DEL pendant 1 secondes par élément.</li>
-<li>Ensuite affiche "Niveau x" sur la première ligne et "Votre tour" sur la deuxième ligne</li>
+<li>Reproduit la suite sur les DEL pendant 1 seconde par élément.</li>
+<li>Un son associé a chaque couleur est joué en meme temps que la DEL s`allume.</li>
+<li>Ensuite affiche "Niveau x" sur la première ligne et "Votre tour" sur la deuxième ligne + un son plus aigu est joué</li>
 <li>Il n'y a pas de limite de temps pour le joueur</li>
 <li>Le joueur doit reproduire la suite avec les boutons aux couleurs correspondantes</li>
+<li>La DEL et le son correspondant sont actifs lorsque le joueur appuie sur un bouton</li>
 </ul>
 </li>
 <li>Si le joueur se trompe dans la suite<ul>
 <li>Affiche ""Niveau x" sur la première ligne et "Erreur" sur la deuxième</li>
-<li>Après 5 secondes affiche partie terminé sur la deuxième ligne</li>
+<li>Un son plus grave est joué pour indiquer l`erreur</li>
+<li>Après 5 secondes affiche <em>Partie terminée</em> sur la deuxième ligne</li>
 <li>Après 5 secondes affiche l'écran de démarrage.</li>
 </ul>
 </li>
-<li>Si le joueur réussi<ul>
+<li>Si le joueur réussit<ul>
 <li>Affiche "Niveau x" sur la première ligne et "Bravo" sur la deuxième</li>
+<li>Une séquence de 2 sons (grave puis aigu) indique le succès </li>
 <li>Après 5 secondes affiche un nouveau niveau</li>
 </ul>
 </li>
 </ul>
+<blockquote>
+<p>Optionnel: Ajouter un bouton rouge et une DEL rouge pour rendre le jeu plus intéressant</p>
+</blockquote>
 
 
 
