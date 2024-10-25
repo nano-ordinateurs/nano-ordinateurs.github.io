@@ -1403,10 +1403,13 @@
 
 
 <h1 id="ecran-lcd">Écran LCD</h1>
-<p>L'écran LCD que nous allons utiliser est le I2C LCD1602. Grâce à un module de communication parralèle/série intégré il n'y a que 4 branchements à faire. Référez-vous aux images suivantes pour les branchements : </p>
+<p>L'écran LCD que nous allons utiliser est le I2C LCD1602. Grâce à un module de communication parallèle/série intégré il n'y a que 4 branchements à faire. Référez-vous aux images suivantes pour les branchements : </p>
 <p><img alt="lcd_01" class="center shadow" src="../../../assets/images/lcd_01.png" /></p>
 <p><img alt="lcd_02" class="center shadow" src="../../../assets/images/lcd_02.png" />
 <em>Libre à vous d'utiliser les ports GPIO que vous souhaitez</em></p>
+<blockquote>
+<p>Attention: Arduino définit SDA et SCL dans les Sketch comme 21 et 22, qui sont les broches par défaut pour le I2C.  Si vous voulez utiliser d'autres broches pour votre montage, utilisez vos propres defines (ex. BROCHE_SDA).</p>
+</blockquote>
 <h2 id="installation-de-la-librairie">Installation de la librairie</h2>
 <p>Dans Arduino IDE installez la librairie <code>LiquidCrystal I2C</code>.</p>
 <p><img alt="lcd_03" class="center shadow" src="../../../assets/images/lcd_03.png" /></p>
@@ -1441,8 +1444,8 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;LiquidCrystal_I2C.h&gt;</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Wire.h&gt;</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="cp">#define SDA 13 </span><span class="c1">//Broche SDA</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="cp">#define SCL 14 </span><span class="c1">//Broche SCL</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="cp">#define BROCHE_SDA 13 </span><span class="c1">//Broche SDA</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="cp">#define BROCHE_SCL 14 </span><span class="c1">//Broche SCL</span>
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="c1">// Instanciation de l&#39;écran</span>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="n">LiquidCrystal_I2C</span><span class="w"> </span><span class="nf">lcd</span><span class="p">(</span><span class="mh">0x3F</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
@@ -1450,7 +1453,7 @@
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="c1">// LiquidCrystal_I2C lcd(0x27, 16, 2);</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a>
 </span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">SDA</span><span class="p">,</span><span class="w"> </span><span class="n">SCL</span><span class="p">);</span><span class="w"> </span><span class="c1">// branchement des broches IIC</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">  </span><span class="n">Wire</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">BROCHE_SDA</span><span class="p">,</span><span class="w"> </span><span class="n">BROCHE_SCL</span><span class="p">);</span><span class="w"> </span><span class="c1">// branchement des broches IIC</span>
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w"> </span><span class="c1">// Initialisation de l&#39;écran</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">backlight</span><span class="p">();</span><span class="w"> </span><span class="c1">// Allume la lumière de fond</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n">lcd</span><span class="p">.</span><span class="n">setCursor</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="c1">// Positionne le curseur à la colonne 0, ligne 0</span>
