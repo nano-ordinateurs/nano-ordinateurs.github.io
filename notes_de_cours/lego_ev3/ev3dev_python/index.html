@@ -1460,37 +1460,41 @@
 
 
 <h1 id="python-sur-ev3dev">Python sur ev3dev</h1>
-<p>Guide: https://ev3dev-lang.readthedocs.io/projects/python-ev3dev/</p>
+<p>Guide: <a href="https://ev3dev-lang.readthedocs.io/projects/python-ev3dev/">https://ev3dev-lang.readthedocs.io/projects/python-ev3dev/</a></p>
 <p>Les scripts Python que vous placez sur la carte SD peuvent être exécutés dans le GUI ev3dev (Brickman) via le <code>File Browser</code>.</p>
-<p>Vous pouvez transferer vos scripts via sftp/scp ou éditer directement via ssh avec nano/vim</p>
+<p>Vous pouvez transférer vos scripts via sftp/scp ou éditer directement via ssh avec nano/vim.  Le fichier doit être marqué comme exécutable (chmod u+x <em>fichier.py</em>)</p>
+<p>Sur erreur à l'éxécution, un fichier d'erreur est généré dans le même répertoire de le script .py</p>
+<p>Une fois le script fonctionnel, vous pouvez retirer la connexion USB pour que votre montage soit autonome.</p>
+<p>Exemple de script:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>#!/usr/bin/env python3
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>from ev3dev2.motor import LargeMotor, OUTPUT_A, OUTPUT_B, SpeedPercent, MoveTank
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>from ev3dev2.motor import LargeMotor, OUTPUT_A, SpeedPercent
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>from ev3dev2.sensor import INPUT_1
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>from ev3dev2.sensor.lego import TouchSensor
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>from ev3dev2.led import Leds
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>from ev3dev2.sound import Sound
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>ts = TouchSensor(INPUT_1)
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>leds = Leds()
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>m = LargeMotor(OUTPUT_A)
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>m.on_for_rotations(SpeedPercent(75), 5)
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>sound = Sound()
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>sound.speak(&#39;Welcome to the E V 3 dev project!&#39;)
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>print(&quot;Press the touch sensor to change the LED color!&quot;)
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>while True:
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    if ts.is_pressed:
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        leds.set_color(&quot;LEFT&quot;, &quot;GREEN&quot;)
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        leds.set_color(&quot;RIGHT&quot;, &quot;GREEN&quot;)
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    else:
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        leds.set_color(&quot;LEFT&quot;, &quot;RED&quot;)
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        leds.set_color(&quot;RIGHT&quot;, &quot;RED&quot;)
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>print(&quot;Start&quot;)
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>sound = Sound()
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>sound.speak(&#39;Welcome to the E V 3 dev project!&#39;)
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>m = LargeMotor(OUTPUT_A)
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>m.on_for_rotations(SpeedPercent(75), 5)
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>print(&quot;Press the touch sensor to change the LED color!&quot;)
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>ts = TouchSensor(INPUT_1)
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>leds = Leds()
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>while True:
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    if ts.is_pressed:
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        leds.set_color(&quot;LEFT&quot;, &quot;GREEN&quot;)
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>        leds.set_color(&quot;RIGHT&quot;, &quot;GREEN&quot;)
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    else:
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>        leds.set_color(&quot;LEFT&quot;, &quot;RED&quot;)
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        leds.set_color(&quot;RIGHT&quot;, &quot;RED&quot;)
 </span></code></pre></div>
-<p>Liste de demos:</p>
-<p>https://github.com/ev3dev/ev3dev-lang-python-demo</p>
+<p>Liste de demos: <a href="https://github.com/ev3dev/ev3dev-lang-python-demo">https://github.com/ev3dev/ev3dev-lang-python-demo</a></p>
 
 
 
