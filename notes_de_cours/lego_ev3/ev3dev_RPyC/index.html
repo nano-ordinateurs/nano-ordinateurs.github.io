@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/lego_ev3/lego_ev3/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/lego_ev3/ev3dev_RPyC/">
       
       
-        <link rel="prev" href="../../esp32/pwm_dac/">
+        <link rel="prev" href="../ev3dev_wifi/">
       
       
-        <link rel="next" href="../ev3dev/">
+        <link rel="next" href="../../../exercices/ex01_enonce/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Intro Lego EV3 - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Remote execution - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lego-mindstorms-ev3" class="md-skip">
+        <a href="#controle-a-distance-a-laide-du-module-python-rpyc-remote-python-control" class="md-skip">
           Aller au contenu
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro Lego EV3
+              Remote execution
             
           </span>
         </div>
@@ -1042,19 +1042,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lego_ev3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +1054,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1157,10 +1147,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ev3dev_RPyC/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Remote execution
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1169,6 +1179,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-rpyc-remote-python-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module RPyC (Remote Python Control)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1506,6 +1545,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#module-rpyc-remote-python-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module RPyC (Remote Python Control)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1522,28 +1578,37 @@
   
 
 
-<h1 id="lego-mindstorms-ev3">Lego Mindstorms EV3</h1>
-<p><img alt="EV3" class="center shadow" src="https://www.lego.com/cdn/cs/set/assets/blt40ee5eaab1a56b38/31313.jpg?format=webply&amp;fit=bounds&amp;quality=70&amp;width=800&amp;height=800&amp;dpr=1.5" /></p>
-<ul>
-<li>3e génération de kit de robotique de Lego, sorti en 2013.</li>
-<li>N'est plus supporté officiellement depuis fin 2022.</li>
-<li>CPU ARM9 qui exécute Linux</li>
-<li>4 prises pour des capteurs (Numéros 1 à 4)<ul>
-<li>capteur de toucher (bouton)</li>
-<li>détecteur de couleur</li>
-<li>capteur infrarouge</li>
-<li>senseur de distance ultrason</li>
-</ul>
-</li>
-<li>4 prises pour des récepteurs (Lettres A à D)<ul>
-<li>différents types de moteurs</li>
-</ul>
-</li>
-<li>Affichage LCD</li>
-<li>Lecteur carte microSD (32GB - OK avec 64GB formatté exFAT)</li>
-<li>Port hôte USB</li>
-<li>Connectivité USB vers PC (port mini USB)</li>
-</ul>
+<h1 id="controle-a-distance-a-laide-du-module-python-rpyc-remote-python-control">Contrôle à distance à l'aide du module python RPyC (Remote Python Control)</h1>
+<p>Commande d'un autre Ev3 ou d'un téléphone</p>
+<p>-- Télécommande</p>
+<p>Commande à partir d'un PC</p>
+<p>-- Besoin de capacités de calcul supplémentaire, ex résolution de cube Rubic</p>
+<h2 id="module-rpyc-remote-python-control">Module RPyC (Remote Python Control)</h2>
+<p>Version 3.3.0 de RPyC déjà installée avec ev3dev</p>
+<p>Une version similaire doit être utilisée sur le client.  ATTENTION 3.3.0 ne supporte pas Python 3.7 et plus - une modification doit être apportée pour être compatible avec les Python récents (<em>async</em> est maintenant un mot clé réservé)</p>
+<p>Installation et doc RPyC</p>
+<p>RPyC avec ev3dev: https://github.com/ev3dev/ev3dev-lang-python/blob/ev3dev-stretch/docs/rpyc.rst</p>
+<p>Doc RPyC: https://rpyc.readthedocs.io/</p>
+<p>Installation sur ev3dev</p>
+<pre>
+
+echo "[Unit]
+Description=RPyC Classic Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rpyc_classic.py
+
+[Install]
+WantedBy=multi-user.target" > rpyc-classic.service
+
+</pre>
+
+<p>sudo mv rpyc-classic.service /lib/systemd/system/
+sudo systemctl daemon-reload
+sudo systemctl enable rpyc-classic.service
+sudo systemctl start rpyc-classic.service</p>
 
 
 

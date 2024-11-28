@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/lego_ev3/lego_ev3/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/exercices/ex12_enonce/">
       
       
-        <link rel="prev" href="../../esp32/pwm_dac/">
+        <link rel="prev" href="../ex11_enonce/">
       
       
-        <link rel="next" href="../ev3dev/">
       
-      
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>Intro Lego EV3 - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Exercice 12 - Lego EV3 - Compétition de bulldozer! - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,15 +46,15 @@
       
     
     
-      <link rel="stylesheet" href="../../../css/extra.css">
+      <link rel="stylesheet" href="../../css/extra.css">
     
-      <link rel="stylesheet" href="../../../css/all.css">
+      <link rel="stylesheet" href="../../css/all.css">
     
-      <link rel="stylesheet" href="../../../css/colors.css">
+      <link rel="stylesheet" href="../../css/colors.css">
     
-      <link rel="stylesheet" href="../../../css/cards.css">
+      <link rel="stylesheet" href="../../css/cards.css">
     
-    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -82,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lego-mindstorms-ev3" class="md-skip">
+        <a href="#competition-de-bulldozers" class="md-skip">
           Aller au contenu
         </a>
       
@@ -98,7 +96,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
-    <a href="../../.." title="Nano-ordinateurs 420-3A3-VI" class="md-header__button md-logo" aria-label="Nano-ordinateurs 420-3A3-VI" data-md-component="logo">
+    <a href="../.." title="Nano-ordinateurs 420-3A3-VI" class="md-header__button md-logo" aria-label="Nano-ordinateurs 420-3A3-VI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m290.8 48.6 78.4 29.7-81.2 31.2-81.2-31.2 78.4-29.7c1.8-.7 3.8-.7 5.7 0zM136 92.5v112.2c-1.3.4-2.6.8-3.9 1.3l-96 36.4C14.4 250.6 0 271.5 0 294.7v119.2c0 22.2 13.1 42.3 33.5 51.3l96 42.2c14.4 6.3 30.7 6.3 45.1 0L288 457.5l113.5 49.9c14.4 6.3 30.7 6.3 45.1 0l96-42.2c20.3-8.9 33.5-29.1 33.5-51.3V294.8c0-23.3-14.4-44.1-36.1-52.4L444 206c-1.3-.5-2.6-.9-3.9-1.3V92.5c0-23.3-14.4-44.1-36.1-52.4L308 3.7c-12.8-4.8-26.9-4.8-39.7 0l-96 36.4C150.4 48.4 136 69.3 136 92.5m256 118.1-82.4 31.2v-89.2L392 121zm-237.2 40.3 78.4 29.7-81.2 31.1-81.2-31.1 78.4-29.7c1.8-.7 3.8-.7 5.7 0zm18.8 204.4V354.8l82.4-31.6v95.9zm247.6-204.4c1.8-.7 3.8-.7 5.7 0l78.4 29.7-81.3 31.1-81.2-31.1zm102 170.3-77.6 34.1V354.8l82.4-31.6v90.7c0 3.2-1.9 6-4.8 7.3"/></svg>
@@ -118,7 +116,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro Lego EV3
+              Exercice 12 - Lego EV3 - Compétition de bulldozer!
             
           </span>
         </div>
@@ -219,7 +217,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../.." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -234,21 +232,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../sense_hat/sense_hat/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../notes_de_cours/sense_hat/sense_hat/" class="md-tabs__link">
           
   
   Notes de cours
@@ -265,11 +259,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../../exercices/ex01_enonce/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../ex01_enonce/" class="md-tabs__link">
           
   
   Exercices
@@ -308,7 +304,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="Nano-ordinateurs 420-3A3-VI" class="md-nav__button md-logo" aria-label="Nano-ordinateurs 420-3A3-VI" data-md-component="logo">
+    <a href="../.." title="Nano-ordinateurs 420-3A3-VI" class="md-nav__button md-logo" aria-label="Nano-ordinateurs 420-3A3-VI" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="m290.8 48.6 78.4 29.7-81.2 31.2-81.2-31.2 78.4-29.7c1.8-.7 3.8-.7 5.7 0zM136 92.5v112.2c-1.3.4-2.6.8-3.9 1.3l-96 36.4C14.4 250.6 0 271.5 0 294.7v119.2c0 22.2 13.1 42.3 33.5 51.3l96 42.2c14.4 6.3 30.7 6.3 45.1 0L288 457.5l113.5 49.9c14.4 6.3 30.7 6.3 45.1 0l96-42.2c20.3-8.9 33.5-29.1 33.5-51.3V294.8c0-23.3-14.4-44.1-36.1-52.4L444 206c-1.3-.5-2.6-.9-3.9-1.3V92.5c0-23.3-14.4-44.1-36.1-52.4L308 3.7c-12.8-4.8-26.9-4.8-39.7 0l-96 36.4C150.4 48.4 136 69.3 136 92.5m256 118.1-82.4 31.2v-89.2L392 121zm-237.2 40.3 78.4 29.7-81.2 31.1-81.2-31.1 78.4-29.7c1.8-.7 3.8-.7 5.7 0zm18.8 204.4V354.8l82.4-31.6v95.9zm247.6-204.4c1.8-.7 3.8-.7 5.7 0l78.4 29.7-81.3 31.1-81.2-31.1zm102 170.3-77.6 34.1V354.8l82.4-31.6v90.7c0 3.2-1.9 6-4.8 7.3"/></svg>
@@ -338,7 +334,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -355,28 +351,23 @@
       
   
   
-    
   
   
-  
     
     
     
       
-        
-        
-      
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -387,7 +378,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Notes de cours
@@ -439,7 +430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/sense_hat/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/sense_hat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -460,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/sense_emu/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/sense_emu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -481,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/lancer_script/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/lancer_script/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -502,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/couleur/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/couleur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -523,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/affichage_pixel/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/affichage_pixel/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/joystick/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/joystick/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -565,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sense_hat/capteur/" class="md-nav__link">
+      <a href="../../notes_de_cours/sense_hat/capteur/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -632,7 +623,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/esp32/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/esp32/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/esp32_pin/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/esp32_pin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/setup/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/setup/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/premier_sketch/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/premier_sketch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +707,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/serial_monitor/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/serial_monitor/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/millis/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/millis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/bluetooth/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/bluetooth/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -817,7 +808,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/del/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/del/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -838,7 +829,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/lcd/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/lcd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -905,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/bouton/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/bouton/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,7 +917,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/potentiometre/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/potentiometre/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -947,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/servo/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/servo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../esp32/pwm_dac/" class="md-nav__link">
+      <a href="../../notes_de_cours/esp32/pwm_dac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1002,8 +993,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1013,11 +1002,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
         
           
           <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
@@ -1031,7 +1020,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_3">
             <span class="md-nav__icon md-icon"></span>
             Lego Ev3
@@ -1042,19 +1031,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../notes_de_cours/lego_ev3/lego_ev3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +1043,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1076,7 +1055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ev3dev/" class="md-nav__link">
+      <a href="../../notes_de_cours/lego_ev3/ev3dev/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1097,7 +1076,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ev3dev_installation/" class="md-nav__link">
+      <a href="../../notes_de_cours/lego_ev3/ev3dev_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1118,7 +1097,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ev3dev_python/" class="md-nav__link">
+      <a href="../../notes_de_cours/lego_ev3/ev3dev_python/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1139,7 +1118,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ev3dev_wifi/" class="md-nav__link">
+      <a href="../../notes_de_cours/lego_ev3/ev3dev_wifi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1160,7 +1139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ev3dev_RPyC/" class="md-nav__link">
+      <a href="../../notes_de_cours/lego_ev3/ev3dev_RPyC/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1193,23 +1172,28 @@
       
   
   
+    
   
   
+  
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1220,7 +1204,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Exercices
@@ -1234,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex01_enonce/" class="md-nav__link">
+      <a href="../ex01_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1255,7 +1239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex02_enonce/" class="md-nav__link">
+      <a href="../ex02_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1276,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex03_enonce/" class="md-nav__link">
+      <a href="../ex03_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1297,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex04_enonce/" class="md-nav__link">
+      <a href="../ex04_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1318,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex05_enonce/" class="md-nav__link">
+      <a href="../ex05_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1339,7 +1323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex06_enonce/" class="md-nav__link">
+      <a href="../ex06_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1360,7 +1344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex07_enonce/" class="md-nav__link">
+      <a href="../ex07_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1381,7 +1365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex08_enonce/" class="md-nav__link">
+      <a href="../ex08_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1402,7 +1386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex09_enonce/" class="md-nav__link">
+      <a href="../ex09_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,7 +1407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex10_enonce/" class="md-nav__link">
+      <a href="../ex10_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../exercices/ex11_enonce/" class="md-nav__link">
+      <a href="../ex11_enonce/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1462,10 +1446,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../exercices/ex12_enonce/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1474,6 +1467,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1522,28 +1516,7 @@
   
 
 
-<h1 id="lego-mindstorms-ev3">Lego Mindstorms EV3</h1>
-<p><img alt="EV3" class="center shadow" src="https://www.lego.com/cdn/cs/set/assets/blt40ee5eaab1a56b38/31313.jpg?format=webply&amp;fit=bounds&amp;quality=70&amp;width=800&amp;height=800&amp;dpr=1.5" /></p>
-<ul>
-<li>3e génération de kit de robotique de Lego, sorti en 2013.</li>
-<li>N'est plus supporté officiellement depuis fin 2022.</li>
-<li>CPU ARM9 qui exécute Linux</li>
-<li>4 prises pour des capteurs (Numéros 1 à 4)<ul>
-<li>capteur de toucher (bouton)</li>
-<li>détecteur de couleur</li>
-<li>capteur infrarouge</li>
-<li>senseur de distance ultrason</li>
-</ul>
-</li>
-<li>4 prises pour des récepteurs (Lettres A à D)<ul>
-<li>différents types de moteurs</li>
-</ul>
-</li>
-<li>Affichage LCD</li>
-<li>Lecteur carte microSD (32GB - OK avec 64GB formatté exFAT)</li>
-<li>Port hôte USB</li>
-<li>Connectivité USB vers PC (port mini USB)</li>
-</ul>
+<h1 id="competition-de-bulldozers">Compétition de bulldozers</h1>
 
 
 
@@ -1596,10 +1569,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>

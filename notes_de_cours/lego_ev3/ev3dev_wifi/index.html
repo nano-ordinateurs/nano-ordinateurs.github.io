@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/lego_ev3/lego_ev3/">
+        <link rel="canonical" href="http://nano-ordinateur.github.io/notes_de_cours/lego_ev3/ev3dev_wifi/">
       
       
-        <link rel="prev" href="../../esp32/pwm_dac/">
+        <link rel="prev" href="../ev3dev_python/">
       
       
-        <link rel="next" href="../ev3dev/">
+        <link rel="next" href="../ev3dev_RPyC/">
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Intro Lego EV3 - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Wifi - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -82,7 +82,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#lego-mindstorms-ev3" class="md-skip">
+        <a href="#wifi-sur-lego-ev3" class="md-skip">
           Aller au contenu
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Intro Lego EV3
+              Wifi
             
           </span>
         </div>
@@ -1042,19 +1042,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../lego_ev3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1063,7 +1054,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1136,10 +1126,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ev3dev_wifi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1148,6 +1147,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1522,28 +1522,11 @@
   
 
 
-<h1 id="lego-mindstorms-ev3">Lego Mindstorms EV3</h1>
-<p><img alt="EV3" class="center shadow" src="https://www.lego.com/cdn/cs/set/assets/blt40ee5eaab1a56b38/31313.jpg?format=webply&amp;fit=bounds&amp;quality=70&amp;width=800&amp;height=800&amp;dpr=1.5" /></p>
-<ul>
-<li>3e génération de kit de robotique de Lego, sorti en 2013.</li>
-<li>N'est plus supporté officiellement depuis fin 2022.</li>
-<li>CPU ARM9 qui exécute Linux</li>
-<li>4 prises pour des capteurs (Numéros 1 à 4)<ul>
-<li>capteur de toucher (bouton)</li>
-<li>détecteur de couleur</li>
-<li>capteur infrarouge</li>
-<li>senseur de distance ultrason</li>
-</ul>
-</li>
-<li>4 prises pour des récepteurs (Lettres A à D)<ul>
-<li>différents types de moteurs</li>
-</ul>
-</li>
-<li>Affichage LCD</li>
-<li>Lecteur carte microSD (32GB - OK avec 64GB formatté exFAT)</li>
-<li>Port hôte USB</li>
-<li>Connectivité USB vers PC (port mini USB)</li>
-</ul>
+<h1 id="wifi-sur-lego-ev3">Wifi sur Lego EV3</h1>
+<p>Il n'y a pas de connectivité Wifi à la base sur les EV3, mais ev3dev utilise le kernel linux, qui supporte une multitude d'adaptateurs Wifi USB.  Pour plusieurs adaptateurs, il suffit de les brancher au port USB hôte du EV3, et vont être détectés automatiquement.</p>
+<p>Il suffit ensuite de configurer les paramètres réseaux tels que le SSID du wifi et de fourinir un mot de passe si nécessaire.</p>
+<p><a href="https://www.ev3dev.org/docs/tutorials/setting-up-wifi-using-the-command-line/">Voici les instructions sur la page de ev3dev</a></p>
+<p>Une fois le wifi fonctionnel - plus besoin d'attacher le EV3 à un PC pour quoi que ce soit - libre enfin!</p>
 
 
 
