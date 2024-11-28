@@ -1603,12 +1603,13 @@ ExecStart=/usr/bin/rpyc_classic.py
 [Install]
 WantedBy=multi-user.target" > rpyc-classic.service
 
-</pre>
 
-<p>sudo mv rpyc-classic.service /lib/systemd/system/
+sudo mv rpyc-classic.service /lib/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable rpyc-classic.service
-sudo systemctl start rpyc-classic.service</p>
+sudo systemctl start rpyc-classic.service
+
+</pre>
 
 
 
