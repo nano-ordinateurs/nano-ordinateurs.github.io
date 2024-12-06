@@ -22,7 +22,7 @@
     
     
       
-        <title>Pause dans le traitement - Nano-ordinateurs 420-3A3-VI</title>
+        <title>Pause dans le traitement / millis() - Nano-ordinateurs 420-3A3-VI</title>
       
     
     
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pause dans le traitement
+              Pause dans le traitement / millis()
             
           </span>
         </div>
@@ -752,7 +752,7 @@
           
   
   <span class="md-ellipsis">
-    Pause dans le traitement
+    Pause dans le traitement / millis()
   </span>
   
 
@@ -763,7 +763,7 @@
         
   
   <span class="md-ellipsis">
-    Pause dans le traitement
+    Pause dans le traitement / millis()
   </span>
   
 
@@ -785,9 +785,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-methode-avec-delais" class="md-nav__link">
+  <a href="#la-methode-avec-delay" class="md-nav__link">
     <span class="md-ellipsis">
-      La méthode avec délais
+      La méthode avec delay()
     </span>
   </a>
   
@@ -1561,9 +1561,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#la-methode-avec-delais" class="md-nav__link">
+  <a href="#la-methode-avec-delay" class="md-nav__link">
     <span class="md-ellipsis">
-      La méthode avec délais
+      La méthode avec delay()
     </span>
   </a>
   
@@ -1598,12 +1598,12 @@
 
 <h1 id="faire-une-pause-dans-le-traitement">Faire une pause dans le traitement</h1>
 <p>Parfois on veut pouvoir faire une pause dans le traitement de notre sketch. Le code étant placé dans une boucle infini qui tourne rapidement, est-ce que nous avons vraiment besoin de prendre une mesure de la température à toute les x millisecondes? Bien sur que non, et il y a des façon de ralentir le traitement.</p>
-<h2 id="la-methode-avec-delais">La méthode avec délais</h2>
-<p>Comme nous l'avons déjà vu, on peut utiliser la fonction <code>delay()</code> qui prend en paramètre un nombre de secondes qui peuvent être décimales.</p>
+<h2 id="la-methode-avec-delay">La méthode avec delay()</h2>
+<p>Comme nous l'avons déjà vu, on peut utiliser la fonction <code>delay()</code> qui prend en paramètre un nombre de millisecondes d'attente.</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Marque une pause de 1 seconde</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">delay</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
 </span></code></pre></div>
-<p>Le désavantage de cette méthode est que <mark class="critic">tout le traitement</mark> est stoppé durant ce délais.</p>
+<p>Le désavantage de cette méthode est que <mark class="critic">tout le traitement</mark> est stoppé durant ce délai.</p>
 <h2 id="la-methode-plus-flexible">La méthode plus flexible</h2>
 <p>On ne peut pas récupérer le temps actuelle depuis le ESP32 mais un peu parcontre savoir depuis combien de temps le programme actuelle tourne sur le ESP32. </p>
 <p>La fonction <code>millis()</code> va nous retourner se nombre en millisecondes.</p>

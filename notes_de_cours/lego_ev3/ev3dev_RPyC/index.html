@@ -741,7 +741,7 @@
         
   
   <span class="md-ellipsis">
-    Pause dans le traitement
+    Pause dans le traitement / millis()
   </span>
   
 
@@ -1587,8 +1587,8 @@
 <p>Version 3.3.0 de RPyC déjà installée avec ev3dev</p>
 <p>Une version similaire doit être utilisée sur le client.  ATTENTION 3.3.0 ne supporte pas Python 3.7 et plus - une modification doit être apportée pour être compatible avec les Python récents (<em>async</em> est maintenant un mot clé réservé)</p>
 <h1 id="documentation-rpyc">Documentation RPyC</h1>
-<p>RPyC avec ev3dev: https://github.com/ev3dev/ev3dev-lang-python/blob/ev3dev-stretch/docs/rpyc.rst</p>
-<p>Doc RPyC: https://rpyc.readthedocs.io/</p>
+<p>RPyC avec ev3dev: <a href="https://github.com/ev3dev/ev3dev-lang-python/blob/ev3dev-stretch/docs/rpyc.rst">https://github.com/ev3dev/ev3dev-lang-python/blob/ev3dev-stretch/docs/rpyc.rst</a></p>
+<p>Doc RPyC: <a href="https://rpyc.readthedocs.io/">https://rpyc.readthedocs.io/</a></p>
 <h1 id="installation-sur-ev3dev">Installation sur ev3dev</h1>
 <pre>
 
@@ -1613,15 +1613,18 @@ sudo systemctl start rpyc-classic.service
 
 <h1 id="installation-sur-pc">Installation sur PC</h1>
 <p>Créez un nouvel venv avec votre Python</p>
-<blockquote>
-<p>python -m venv ev3dev
-ev3dev/bin/activate</p>
-</blockquote>
+<pre>
+python3 -m venv ev3dev
+./ev3dev/bin/activate
+</pre>
+
+<p>(ev3dev/Scripts/activate dans PowerShell)</p>
 <p>Installez la version 3.3.0 de rpyc</p>
 <blockquote>
 <p>pip install rpyc==3.3.0</p>
 </blockquote>
-<p>Écraser le contenu du package dans rpyc site-packages avec le code modifié pour Python 3.7 et plus</p>
+<p>Écraser le contenu du package rpyc dans lib/site-packages avec le code modifié pour Python 3.7 et plus</p>
+<p><a href="https://cegepvicto.sharepoint.com/:u:/s/Section_31416/EaSgb2WDuqNBp8A7tOWczpABCe3ZcWbZ-h8Uz_seT3MMog?e=mVVPhZ">rpyc-3.3.0-mod</a></p>
 <h1 id="exemple-de-code-pour-allumer-les-leds-a-distance">Exemple de code pour allumer les leds à distance</h1>
 <pre>
 import rpyc
