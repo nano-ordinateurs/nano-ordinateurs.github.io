@@ -1658,7 +1658,7 @@
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">}</span>
 </span></code></pre></div>
 <p>Il nous reste maintenant à lire les données provenant du port série. Il y a plusieurs fonctions de lecture, nous allons pour l'exemple utiliser <code>Serial.readStringUntil()</code>. Cette fonction va lire et retourner les caractères jusqu'à ce qu'elle lise un caractère qu'on lui donne en paramètre OU si un timeout est atteint. </p>
-<p>Le timeout par défaut est 1000ms, il peut être changé à l'aide de <code>Serial.setTimout(ms)</code></p>
+<p>Le timeout par défaut est 1000ms, il peut être changé à l'aide de <code>Serial.setTimeout(ms)</code></p>
 <p>Lisons les charactères entrant sur le port série en utilisant le caratère <code>\n</code> (indiquant une nouvelle ligne) comme caratère de fin.  Ce caractère ne sera pas inclus dans la chaine retournée par la fonction.</p>
 <div class="language-c highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">String</span><span class="w"> </span><span class="n">monTexte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Serial</span><span class="p">.</span><span class="n">readStringUntil</span><span class="p">(</span><span class="sc">&#39;\n&#39;</span><span class="p">);</span>
 </span></code></pre></div>
