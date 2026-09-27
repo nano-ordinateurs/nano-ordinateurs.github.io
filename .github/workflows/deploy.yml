@@ -1,0 +1,30 @@
+name: Build MkDocs then Deploy to External Repo
+on:
+  push:
+    branches:
+      - main  # or your default branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install mkdocs-material neoteroi-mkdocs # Add any other plugins here
+
+      - name: Build MkDocs
+        run: mkdocs build
+
+      - name: Deploy to External Repo
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.DEST_REPO_TOKEN }}
+          external_repository: nano-ordinateurs/nano-ordinateurs.github.io
+          publish_branch: main
+          publish_dir: ./site
