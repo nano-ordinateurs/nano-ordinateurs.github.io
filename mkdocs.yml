@@ -8,7 +8,7 @@ nav:
     - Raspberry  pi:
       - Introduction au raspberry pi: notes_de_cours/raspberry_pi/raspberry_pi.md
       - Usage du raspberry pi: notes_de_cours/raspberry_pi/usage_rpi.md
-      # - Connection headless: notes_de_cours/raspberry_pi/headless.md
+      - Connection headless: notes_de_cours/raspberry_pi/headless.md
     - Sense Hat:
       - Définitions: notes_de_cours/sense_hat/sense_hat.md  
       - Émulateur: notes_de_cours/sense_hat/sense_emu.md  
