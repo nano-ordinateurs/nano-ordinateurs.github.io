@@ -45,7 +45,7 @@ void loop() {
 - [ ] Testez ensuite la connexion en envoyant au esp32 un message depuis le cellulaire et vice versa
 
 
-## Controler une DEL
+## Contrôler une DEL
 
 Continuons notre exploration des possibilités que nous offre le Bluetooth en contrôlant une DEL depuis notre cellulaire.
 

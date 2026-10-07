@@ -10,6 +10,7 @@ nav:
       - Usage du raspberry pi: notes_de_cours/raspberry_pi/usage_rpi.md
       - Connection headless: notes_de_cours/raspberry_pi/headless.md
     - Sense Hat:
+      - Tutoriel Python: notes_de_cours/sense_hat/python.md
       - Définitions: notes_de_cours/sense_hat/sense_hat.md  
       - Émulateur: notes_de_cours/sense_hat/sense_emu.md  
       - Interagir avec le Sense Hat: notes_de_cours/sense_hat/lancer_script.md
@@ -56,7 +57,9 @@ nav:
       - Exercice 10 - ESP32 - Bluetooth: exercices/ex10_enonce.md
       - Exercice 11 - Lego EV3 - Démarrage ev3dev: exercices/ex11_enonce.md
       - Exercice 12 - Lego EV3 - Compétition de bulldozer: exercices/ex12_enonce.md
-
+  - 'Correction':
+      - Exercice 04 - Exercice 04 : correction/ex04_correction.md 
+      - Exercice 05 - Exercice 05 : correction/ex05_correction.md
 theme: 
   name: material
   language: fr
