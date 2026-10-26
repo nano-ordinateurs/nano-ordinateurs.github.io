@@ -21,8 +21,8 @@ nav:
     - Esp32:
       - Intro ESP32: notes_de_cours/esp32/esp32.md
       - Les broches du ESP32: notes_de_cours/esp32/esp32_pin.md
-      - Installation Arduino IDE: notes_de_cours/esp32/setup.md
-      - Notre premier sketch: notes_de_cours/esp32/premier_sketch.md
+      - Installation de Thonny: notes_de_cours/esp32/setup.md
+      - Notre premier programme: notes_de_cours/esp32/premier_sketch.md
       - Le moniteur série: notes_de_cours/esp32/serial_monitor.md
       - Pause dans le traitement / millis(): notes_de_cours/esp32/millis.md
       - Connexion Bluetooth: notes_de_cours/esp32/bluetooth.md
