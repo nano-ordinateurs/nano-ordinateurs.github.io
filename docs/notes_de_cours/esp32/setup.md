@@ -8,7 +8,7 @@ Pour transférer notre code, il faut installer le driver CH340 sur notre ordinat
 
 Commencez par connecter l'ESP32 à l'ordinateur à l'aide du câble USB.
 
-Ensuite, téléchargez le driver à cette adresse : [https://www.wch-ic.com/search?q=CH340&t=downloads](https://www.wch-ic.com/search?q=CH340&t=downloads){target=_blank}. Le fichier à télécharger pour les portables sous Windows est **CH341SER.exe**. Exécutez le fichier une fois téléchargé.
+Ensuite, téléchargez le driver à cette adresse : [lien](https://learn.sparkfun.com/tutorials/how-to-install-ch340-drivers/all#windows-710){target=_blank}. Le fichier à télécharger pour les portables sous Windows est **CH341SER.exe**. Exécutez le fichier une fois téléchargé.
 
 Pour vérifier que le driver est bien installé, ouvrez l'explorateur de fichiers et cliquez avec le bouton droit sur « Ce PC ». Sélectionnez ensuite « Gérer » et, dans le panneau de droite, « Gestionnaire de périphériques ».
 
