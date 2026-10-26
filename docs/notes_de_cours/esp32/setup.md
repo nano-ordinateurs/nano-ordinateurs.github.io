@@ -1,46 +1,152 @@
 # Installation
 
-Avant de pouvoir exécuter des scripts sur le ESP32 nous devons installer le pilote de périphérique pour communiquer avec le ESP et le logiciel Arduino IDE
+Avant de pouvoir exécuter des scripts sur l'ESP32, nous devons d'abord nous assurer que le pilote de périphérique permet de communiquer avec la carte, flasher le firmware **MicroPython** sur l'ESP32, puis installer et configurer l'IDE **Thonny**.
 
-## Installation des drivers CH340
+## Installation du driver CH340 (Windows uniquement)
 
-Pour transérer notre code il faut installer le driver CH340 sur notre ordinateur. 
+Pour transférer notre code, il faut installer le driver CH340 sur notre ordinateur.
 
-Commencez par connecter le ESP32 à l'ordinateur à l'aide du cable USB.
+Commencez par connecter l'ESP32 à l'ordinateur à l'aide du câble USB.
 
-Ensuite téléchargez le driver à cette adresse : [https://www.wch-ic.com/search?q=CH340&t=downloads](https://www.wch-ic.com/search?q=CH340&t=downloads){target=_blank}. Le fichier à télécharger pour les portables sous Windows est **CH341SER.exe**. Exécutez le fichier une fois téléchargé.
+Ensuite, téléchargez le driver à cette adresse : [https://www.wch-ic.com/search?q=CH340&t=downloads](https://www.wch-ic.com/search?q=CH340&t=downloads){target=_blank}. Le fichier à télécharger pour les portables sous Windows est **CH341SER.exe**. Exécutez le fichier une fois téléchargé.
 
-Pour vérifier que le driver est bien installé, ouvrez l'explorateur de fichier et cliquez avec le bouton de droit sur "Ce PC". Sélectionnez ensuite "Gérer" et dans le paneau de droite "Gestionnaire de périphériques". 
+Pour vérifier que le driver est bien installé, ouvrez l'explorateur de fichiers et cliquez avec le bouton droit sur « Ce PC ». Sélectionnez ensuite « Gérer » et, dans le panneau de droite, « Gestionnaire de périphériques ».
 
 ![setup_01](\assets\images\esp32_setup_01.png){.center .shadow}
 
-Dans la section "Ports (COM et LPT)" vous devriez avoir une entrée "USB-SERIAL CH340(COM4)". Le numéro du port peut changer (COM4).
+Dans la section « Ports (COM et LPT) », vous devriez avoir une entrée « USB-SERIAL CH340 (COM4) ». Le numéro du port peut changer (COM4). **Notez ce numéro** : il servira plus tard.
 
-## Installation de Arduino IDE
+## Sur Linux (en cas de problème seulement)
 
-Passons maintenant à l'installation de notre IDE, Arduino IDE. Allez à l'adresse suivante télécharger la dernière version disponible pour votre système d'exploitation : 
+Sur Linux, le driver `ch341` est déjà intégré donc pas besoin de le télécharger. Il reste juste a vérifier les permissions d'accès qui pourraient verrouiller le port.
 
-- [https://www.arduino.cc/en/software](https://www.arduino.cc/en/software){target=_blank}
+### Vérifier la détection de la carte
 
-Démarrer l'installation une fois le programme téléchargé et ensuite lancez l'application.
+Branchez l'ESP32, puis vérifiez que le système a bien créé le port série :
 
-![setup_02](\assets\images\esp32_setup_02.png){.center .shadow}
+```bash
+sudo dmesg | tail -20
+```
 
-## Configuration de l'environnement
+Vous devriez voir apparaître `ch341-uart` et la création d'un port comme `/dev/ttyUSB0`. Pour lister les ports disponibles à tout moment :
 
-Encore quelques petites configurations. Dans le programme Arduino IDE, cliquez sur "Tools", "Board", "Board Manager" et "ESP32 by Expressif" 
+```bash
+ls /dev/ttyUSB*
+```
 
-![setup_03](\assets\images\Arduino_esp32_1_board_manager.png){.center .shadow}
+### Autoriser l'accès au port série
+
+Sous Linux, les ports série nécessitent des permissions particulières. Sur la plupart des distributions le groupe à utiliser est `dialout`. 
+
+Vérifiez si votre utilisateur appartient déjà au bon groupe :
+
+```bash
+groups $USER
+```
+
+Si `uucp` (ou `dialout`) n'apparaît pas, ajoutez-vous au groupe :
+```bash
+sudo usermod -a -G dialout $USER
+```
 
 
-Ensuite dans la barre en haut selectionner le drop-down Select Board and Port
+### Bug lié au port bloquer
 
-![setup_04](\assets\images\Arduino_esp32_2_Select_Board_and_port.png){.center .shadow}
+Si vous rencontrez des erreurs de type `Permission denied` ou `read_until timed out`, arrêtez ces services.
 
-Spécifiez votre Port COM (varie d'un ordinateur à l'autre) et le modèle de board "ESP32 WROVER KIT"
+```bash
+sudo systemctl stop ModemManager
+sudo systemctl stop brltty.service
+```
 
-![setup_05](\assets\images\Arduino_esp32_3_Select_Board.png){.center .shadow}
 
-Bingo votre portable est connecté à votre ESP32, vous en avez la preuve ici
+## Flasher l'ESP32 (firmware MicroPython)
 
-![setup_06](\assets\images\esp32_setup_05.png){.center .shadow}
+Avant que Thonny puisse communiquer avec la carte, il faut installer le **firmware MicroPython**. C'est le logiciel qui s'exécute au démarrage de l'ESP32 et qui contient l'interpréteur Python. Une carte vierge ne peut pas répondre à Thonny. Votre carte est équipée d'un module **WROVER**, qui possède de la **PSRAM** (SPIRAM). Il faut donc choisir la variante **« Support for SPIRAM / WROVER »** sur la page de téléchargement officielle.
+
+1. Rendez-vous sur [https://micropython.org/download/ESP32_GENERIC/](https://micropython.org/download/ESP32_GENERIC/){target=_blank}.
+2. Dans la section **« Support for SPIRAM / WROVER »**, téléchargez le fichier `.bin` le plus récent (par exemple `ESP32_GENERIC-SPIRAM-2024xxxx-v1.xx.x.bin`).
+3. Placez ce fichier dans un dossier simple (par exemple `~/firmware/` sous Linux, ou `C:\firmware\` sous Windows).
+
+
+## Flashage en ligne de commande avec `esptool`
+
+Si vous préférez comprendre ce qui se passe sous le capot, ou si l'interface graphique ne fonctionne pas, vous pouvez utiliser `esptool` directement.
+
+**Installer `esptool`** :
+
+
+- **Ubuntu** :
+  ```bash
+  sudo apt install esptool
+  ```
+- **Windows** (via `pip`, après avoir installé Python) :
+  ```powershell
+  pip install esptool
+  ```
+
+**Effacer la flash** (recommandé pour une première installation) :
+
+- **Linux** :
+  ```bash
+  esptool.py --chip esp32 --port /dev/ttyUSB0 erase_flash
+  ```
+- **Windows** :
+  ```powershell
+  esptool --chip esp32 --port COM4 erase_flash
+  ```
+
+**Écrire le firmware** à l'adresse `0x1000` :
+
+- **Linux** :
+  ```bash
+  esptool.py --chip esp32 --port /dev/ttyUSB0 --baud 460800 write_flash -z 0x1000 ~/firmware/NOM_DU_FICHIER.bin
+  ```
+- **Windows** :
+  ```powershell
+  esptool --chip esp32 --port COM4 --baud 460800 write_flash -z 0x1000 C:\firmware\NOM_DU_FICHIER.bin
+  ```
+
+### Si la carte n'est pas détectée en mode bootloader
+
+Il peut arriver que la carte ne bascule pas automatiquement en mode bootloader. Dans ce cas, utilisez la séquence manuelle :
+
+1. Maintenez le bouton **`BOOT`** enfoncé.
+2. Appuyez brièvement sur **`EN` (ou `RST`)** , puis relâchez-le, tout en gardant `BOOT` enfoncé.
+3. Relâchez **`BOOT`**.
+
+La carte attend alors les commandes de flashage.
+
+
+
+
+## Installation de Thonny
+
+Passons maintenant à l'installation de notre IDE, **Thonny**. Vérifiez d'abord s'il est déjà installé sur votre ordinateur (il était normalement inclus dans le SenseHAT). Sinon, allez à l'adresse suivante pour télécharger la dernière version disponible pour votre système d'exploitation :
+
+- [https://thonny.org/](https://thonny.org/){target=_blank}
+
+Démarrez l'installation une fois le programme téléchargé, puis lancez l'application.
+
+
+
+## Configuration de Thonny
+
+Une fois Thonny lancé et le firmware flashé, il reste à indiquer à l'IDE quel interpréteur utiliser et sur quel port.
+
+1. Dans Thonny, allez dans **`Run`**.
+2. Dans le menu déroulant **Interpreter**, choisissez **`MicroPython (ESP32)`**.
+3. Dans le champ **Port**, sélectionnez le port correspondant à votre carte :
+   - **Linux** : `/dev/ttyUSB0` (ou `/dev/ttyUSB1`, etc.).
+   - **Windows** : `COM4` (ou le numéro que vous avez noté).
+4. Cliquez sur **OK**.
+
+La barre d'état en bas à droite de Thonny doit maintenant afficher quelque chose comme `MicroPython (ESP32) · /dev/ttyUSB0`. Pour vérifier que la connexion est établie, cliquez sur le bouton **Stop/Restart** (carré rouge) : le Shell en bas doit afficher le prompt `>>>` de MicroPython.
+
+Vous pouvez alors tester une commande simple :
+
+```python
+print("Hello ESP32")
+```
+
+Si le message s'affiche, votre carte est prête et vous pouvez passer aux exercices.
