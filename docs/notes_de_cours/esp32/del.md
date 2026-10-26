@@ -58,29 +58,3 @@ On va maintenant faire un branchement simple d'une DEL rouge à notre ESP32. Le 
   <figcaption>Promis les prochains montage je fais des schémas plus jolie</figcaption>
 </figure>
 
-## Faisons clignoter la DEL
-
-On va reprendre le premier sketch qu'on avait fait pour faire clignoter la DEL incluse sur le ESP32. Vous l'avez deviné on va faire clignoter notre belle DEL rouge. Comme on peut voir sur le schéma j'ai branché le circuit qui alimente la DEL sur le GPIO2.
-
-``````c linenums="1"
-// On stocke dans une constante le numéro du GPIO utilisé
-#define PIN_DEL 2
-
-void setup() {
-  // On initialize la pin en sortie
-  pinMode(PIN_DEL, OUTPUT);
-}
-
-void loop() {
-  // Allume la DEL
-  digitalWrite(PIN_DEL, HIGH);
-  delay(1000);
-  // Éteins la DEL
-  digitalWrite(PIN_DEL, LOW);
-  delay(1000);
-}
-``````
-
-- [x] Testez votre branchement avec cet extrait de code, votre DEL devrait allumer. Vous avez surement remarqué que la DEL du ESP32 s'est mise à clignoter elle aussi. C'est parce qu'elle est également branché au GPIO2.
-- [x] Changez votre branchement pour utiliser un autre port GPIO. Vous pouvez vous référer au schéma de la page sur les broches du ESP32. Vous pouvez utiliser n'importe quel broche GPIO Entrée et sortie (Input and Output). Ajuster votre code selon votre nouveau branchement.
-
