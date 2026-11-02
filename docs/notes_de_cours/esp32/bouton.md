@@ -22,27 +22,10 @@ Pour relier un bouton en utilisant la résistance interne on va brancher une bro
 
 ![button_03](\assets\images\button_03.png){.center}
 
-Ensuite dans le code on va encore s'initialiser une constante avec le numéro du GPIO où le bouton est branché. 
-
-`#define PIN_BUTTON 8`
-
-Dans la fonction setup() on va initialiser la broche avec pinMode à INPUT_PULLUP pour indiquer qu'on utilise le circuit interne qui va indiquer HIGH quand le bouton est relâché.
-
-`pinMode(PIN_BUTTON, INPUT_PULLUP);`
-
-La fonction digitalRead() va nous retourner un byte : 0 (LOW) ou 1 (HIGH).
-
-``````c
-byte etatBouton = digitalRead(PIN_BUTTON);
-if (etatBouton == LOW) {
-    // Broche relié au neutre:  bouton appuyé
-    // ...
-}
-``````
 
 ## À vous de jouer
 
-- [x] Créez le montage affiché plus haut et écrivez un sketch qui va écrire à la console en continu si le bouton est pressé ou non.
+- [x] Créez le montage affiché plus haut et écrivez un programme qui va écrire à la console en continu si le bouton est pressé ou non.
 - [x] Est-ce que vous remarquez quelque chose de particulier? Est-ce que le texte affiché est toujours correct.
 - [x] Faites une petite recherche sur le phénomène de "Debounce" et ajustez votre code pour pallier à ce problème.
 
