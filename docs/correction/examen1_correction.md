@@ -144,12 +144,12 @@ while True:
 
 ### 4
 
-Il y avait 4 point allouer a ce numéro il y a en eu 2 finalement. 
+Il y avait 4 points alloués à ce numéro ; il y en a finalement eu 2.
 
-4 point : le jeu fonctionne parfaitement.
-3 point : le jeu fonctionne mais ne réponds pas à tout les spécifications.
-2 point : les grands méchanisme du jeu fonctionne (choix aléatoire et boucle cohérente).
-1 point : un méchanisme important est mis en valeur.
+4 points : le jeu fonctionne parfaitement.
+3 points : le jeu fonctionne mais ne répond pas à toutes les spécifications.
+2 points : les grands mécanismes du jeu fonctionnent (choix aléatoire et boucle cohérente).
+1 point : un mécanisme important est mis en valeur.
 
 ```py
 from sense_emu import SenseHat
