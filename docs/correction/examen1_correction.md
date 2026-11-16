@@ -34,7 +34,7 @@ ssh user@hostname.local
 
 Ce qui était évalué ici, c'était votre capacité à transférer et exécuter un programme sur un environnement qui n'était pas le vôtre.
 
-Si vous aviez fait un `hello world` sur une machine.
+Si vous aviez fait un `hello world` sur une machine, vous ne pouviez obtenir un maximum de 0.25 de vos points.
 
 ### Question 5
 
