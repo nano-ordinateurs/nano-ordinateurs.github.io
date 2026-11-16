@@ -24,6 +24,7 @@ nav:
       - Installation de Thonny: notes_de_cours/esp32/setup.md
       - Notre premier programme: notes_de_cours/esp32/premier_sketch.md
       - Micropython : notes_de_cours/esp32/micropython.md
+      - Convertion : notes_de_cours/esp32/conversion.md
       # - Le moniteur série: notes_de_cours/esp32/serial_monitor.md
       # - Pause dans le traitement / millis(): notes_de_cours/esp32/millis.md
       # - Connexion Bluetooth: notes_de_cours/esp32/bluetooth.md
