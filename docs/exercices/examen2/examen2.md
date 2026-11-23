@@ -8,7 +8,6 @@
 - Vous avez droit à toute la documentation que vous désirez, numérique ou physique.
 - Si vous souhaitez faire des recherches en ligne, utilisez **https://udm14.com/**.
 - L’examen nécessite l’utilisation de la plateforme **exam.net**. Vous trouverez le lien dans le devoir associé à l’examen sur Teams.
-- Votre remise doit respecter le format établi dans les documents qui vous sont fournis.
 - Tentez de reproduire le circuit le plus fidèlement possible.
 - À la fin de l’examen, remettez votre travail sur Teams.
 
