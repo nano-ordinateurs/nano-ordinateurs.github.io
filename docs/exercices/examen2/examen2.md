@@ -2,7 +2,6 @@
 
 ## Consignes
 
-- L’examen comporte 5 questions. Seules vos 4 meilleures réponses compteront pour la note.
 - L’usage des LLM (IA) est interdit.
 - L’usage d’appareils ou d’applications permettant la communication est interdit.
 - Le plagiat, de manière générale, est interdit.
@@ -14,30 +13,11 @@
 - À la fin de l’examen, remettez votre travail sur Teams.
 
 
-
----
-
-
-
-## Question 1 — Clignotement
-
-![Montage de la question 1](q1.png)
-
-À partir de ce montage, écrivez un programme qui fait clignoter une DEL. La fréquence de clignotement de la DEL peut être manipulée par le potentiomètre afin de rendre le clignotement plus rapide ou plus lent. Toutefois, une nouvelle fréquence ne doit être appliquée qu’après un appui sur le bouton-poussoir.
-
-
-Autrement dit :
-- Le potentiomètre contrôle la fréquence de clignotement de la DEL. Il est en mesure de rendre le clignotement de la DEL plus rapide ou plus lent.
-- Un changement de fréquence de clignotement ne prend effet qu’après un appui sur le bouton-poussoir.
-
-
-**Il n’est pas nécessaire que la nouvelle fréquence soit appliquée instantanément après l’appui. On peut maintenir le bouton enfoncé pendant toute la durée des `sleep` présents dans la boucle, et la fréquence sera appliquée dès que le programme revient lire le bouton. Cette façon de faire est parfaitement valide.**
-
 ---
 
 ![Montage de la question 2 et 3](q2_3.png)
 
-## Question 2 — Incrémenter et décrémenter (25 %)
+## Question 1 — Incrémenter et décrémenter (25 %)
 
 Ce circuit utilise trois DEL pour représenter un compteur binaire allant de 0 à 7 : la première DEL a une valeur de 1, la deuxième une valeur de 2 et la troisième une valeur de 4. Écrivez un programme qui affiche la valeur d’une variable servant de compteur et qui permet de modifier cette variable grâce à deux boutons-poussoirs. Le premier bouton ajoute 1 à la valeur du compteur, et le deuxième bouton retire 1 à la valeur du compteur.
 
@@ -49,7 +29,7 @@ Autrement dit :
 
 ---
 
-## Question 3 — Un curseur (25 %)
+## Question 2 — Un curseur (25 %)
 
 Cette question utilise le même montage que la question 2. En utilisant le même circuit et les mêmes branchements qu’à la question précédente, écrivez un programme qui permet de déplacer une DEL allumée à l’aide de deux boutons-poussoirs : un bouton déplace la DEL allumée vers la droite, et l’autre la déplace vers la gauche.
 
@@ -65,8 +45,23 @@ Autrement dit :
 
 ---
 
-![Montage de la question 4 et 5](q4_5.png)
 
+
+## Question 3 — Clignotement
+
+![Montage de la question 1](q1.png)  
+
+À partir de ce montage, écrivez un programme qui fait clignoter une DEL. La fréquence de clignotement de la DEL peut être manipulée par le potentiomètre afin de rendre le clignotement plus rapide ou plus lent. Toutefois, une nouvelle fréquence ne doit être appliquée qu’après un appui sur le bouton-poussoir.
+
+
+Autrement dit :
+- Le potentiomètre contrôle la fréquence de clignotement de la DEL. Il est en mesure de rendre le clignotement de la DEL plus rapide ou plus lent.
+- Un changement de fréquence de clignotement ne prend effet qu’après un appui sur le bouton-poussoir.
+
+
+**Il n’est pas nécessaire que la nouvelle fréquence soit appliquée instantanément après l’appui. On peut maintenir le bouton enfoncé pendant toute la durée des `sleep` présents dans la boucle, et la fréquence sera appliquée dès que le programme revient lire le bouton. Cette façon de faire est parfaitement valide.**
+
+---
 
 
 ## Question 4 — Deviner le nombre (25 %)
@@ -90,30 +85,3 @@ Autrement dit :
 
 
 
----
-
-## Question 5 — Le cadenas (25 %)
-
-Le circuit à utiliser est le même qu’à la question 4 (vous n’aurez pas besoin du bouton).
-
-En utilisant uniquement la lecture de la valeur d’un potentiomètre, écrivez un programme qui fonctionne comme le mécanisme de verrouillage d’un cadenas. Si votre programme lit la bonne séquence de valeurs à partir du potentiomètre, il affiche un message indiquant que le cadenas a été déverrouillé.
-
-On considère que, lorsque la valeur du potentiomètre reste stable pendant environ une seconde, un choix est validé pour le déverrouillage du cadenas. Autrement dit, si l’on ne touche plus au potentiomètre pendant une seconde, on considère qu’un choix de la combinaison a été fait par l’utilisateur.
-
-
-Voici un exemple de format pour le code :
-
-```py
-code = [1234, 4021, 2560]
-```
-
-Pour déverrouiller un cadenas ayant ce format, il faut d’abord choisir une valeur autour de `1234` avec le potentiomètre et la maintenir stable environ une seconde, puis choisir une valeur autour de `4021` et la maintenir stable environ une seconde, puis choisir une valeur autour de `2560` et la maintenir stable environ une seconde.
-
-**Il faut faire attention aux variations de valeur engendrées par la lecture du potentiomètre, même sans mouvement, la valeur lue peut fluctuer légèrement.**
-
-Autrement dit :
-
-- Le potentiomètre permet de choisir une valeur.
-- Cette valeur est choisie lorsque le potentiomètre arrête de bouger (valeur stable pendant environ une seconde).
-- Si toutes les bonnes valeurs sont choisies, dans l’ordre, un message apparaît dans la console pour indiquer que le cadenas a été déverrouillé.
-- Si une valeur validée est incorrecte, la séquence est réinitialisée : le programme revient au premier choix du code.
