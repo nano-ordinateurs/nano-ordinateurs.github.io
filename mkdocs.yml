@@ -54,7 +54,8 @@ nav:
       - Exercice 05 - Sense Hat Capteurs: exercices/ex05_enonce.md
       - Exercice 06 - ESP32 - DEL: exercices/ex06_enonce.md
       - Exercice 07 - ESP32 - Boutons: exercices/ex07_enonce.md
-      - Exercice 08 - ESP32 - Servomoteur et DAC: exercices/ex08_enonce.md
+      - Exercice 08 - ESP32 - ADC et potentiometre: exercices/ex08_enonce.md
+      - Examen 2 - ESP32: exercices/examen2/examen2.md
       - Exercice 09 - ESP32 - Jeu Simon: exercices/ex09_enonce.md
       - Exercice 10 - ESP32 - Bluetooth: exercices/ex10_enonce.md
       - Exercice 11 - Lego EV3 - Démarrage ev3dev: exercices/ex11_enonce.md
