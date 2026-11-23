@@ -73,9 +73,9 @@ Autrement dit :
 
 À l’aide du circuit présenté plus haut, écrivez un programme qui permet de deviner un nombre à l’aide d’un potentiomètre et d’un bouton-poussoir.
 
-À l’initialisation du programme, un nombre est choisi au hasard. À l’aide du potentiomètre, choisissez ensuite un nombre entre 0 et 4095. Vous pouvez confirmer votre choix en appuyant sur le bouton-poussoir. Si la valeur choisie avec le potentiomètre est supérieure au nombre aléatoire, le programme affiche « Nombre trop grand ». Si elle est inférieure, le programme affiche « Nombre trop petit ». Si c'est la bonne valeur, votre programme doit afficher un message de victoire.
+À l’initialisation du programme, un nombre est choisi au hasard. À l’aide du potentiomètre, choisissez ensuite un nombre entre 0 et 4095. Vous pouvez confirmer votre choix en appuyant sur le bouton poussoir. Si la valeur choisie avec le potentiomètre est supérieure au nombre aléatoire, le programme affiche « Nombre trop grand ». Si elle est inférieure, le programme affiche « Nombre trop petit ». Si c'est la bonne valeur, votre programme doit afficher un message de victoire.
 
-Le programme doit tolérer une certaine incertitude (marge d'erreur) dans les valeurs du potentiomètre afin de fonctionner correctement (je vous conseille 100). Par exemple, si le nombre aléatoire est 2000 et que vous choisissez à l'aide du potentiomètre, le programme doit tout de même afficher un message de victoire.
+Le programme doit tolérer une certaine incertitude (marge d'erreur) dans les valeurs du potentiomètre afin de fonctionner correctement (je vous conseille 100). Par exemple, si le nombre aléatoire est 2000 et que vous choisissez à l'aide du potentiomètre 1910, le programme doit tout de même afficher un message de victoire.
 
 Autrement dit :
 
