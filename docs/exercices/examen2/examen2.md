@@ -31,7 +31,7 @@ Autrement dit :
 
 ## Question 2 — Un curseur (25 %)
 
-Cette question utilise le même montage que la question 2. En utilisant le même circuit et les mêmes branchements qu’à la question précédente, écrivez un programme qui permet de déplacer une DEL allumée à l’aide de deux boutons-poussoirs : un bouton déplace la DEL allumée vers la droite, et l’autre la déplace vers la gauche.
+Cette question utilise le même montage que la question 1. En utilisant le même circuit et les mêmes branchements qu’à la question précédente, écrivez un programme qui permet de déplacer une DEL allumée à l’aide de deux boutons-poussoirs : un bouton déplace la DEL allumée vers la droite, et l’autre la déplace vers la gauche.
 
 Au départ, une seule DEL est allumée. Un appui sur le bouton droit fait en sorte que seule la DEL immédiatement à droite de la DEL actuelle soit allumée. Un appui sur le bouton gauche fait en sorte que seule la DEL immédiatement à gauche de la DEL actuelle soit allumée.
 
@@ -66,7 +66,7 @@ Autrement dit :
 
 ## Question 4 — Deviner le nombre (25 %)
 
-À l’aide du circuit présenté plus haut, écrivez un programme qui permet de deviner un nombre à l’aide d’un potentiomètre et d’un bouton-poussoir.
+À l’aide du circuit présenté plus haut (question 3), écrivez un programme qui permet de deviner un nombre à l’aide d’un potentiomètre et d’un bouton-poussoir.
 
 À l’initialisation du programme, un nombre est choisi au hasard. À l’aide du potentiomètre, choisissez ensuite un nombre entre 0 et 4095. Vous pouvez confirmer votre choix en appuyant sur le bouton poussoir. Si la valeur choisie avec le potentiomètre est supérieure au nombre aléatoire, le programme affiche « Nombre trop grand ». Si elle est inférieure, le programme affiche « Nombre trop petit ». Si c'est la bonne valeur, votre programme doit afficher un message de victoire.
 
