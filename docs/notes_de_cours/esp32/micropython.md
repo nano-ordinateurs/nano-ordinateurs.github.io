@@ -51,6 +51,10 @@ La résistance de tirage, appelée pull-up ou pull-down en anglais, permet d’i
 
 ----
 
+
+
+
+
 ## Exemple de lecture et écriture pour différent composant
 
 ### Lecture d’un signal logique (bouton)
